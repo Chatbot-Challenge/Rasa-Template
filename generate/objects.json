@@ -1,0 +1,254 @@
+{
+  "objects": {
+    "chair": {
+      "synonyms": [
+        "seat",
+        "stool",
+        "bench",
+        "sofa",
+        "chairs",
+        "seats",
+        "stools",
+        "benches",
+        "sofas"
+      ]
+    },
+    "table": {
+      "synonyms": [
+        "desk",
+        "workbench",
+        "countertop",
+        "surface",
+        "tables",
+        "desks",
+        "workbenches",
+        "countertops",
+        "surfaces"
+      ]
+    },
+    "clock hand": {
+      "synonyms": ["clock hands", "hands", "hour hand", "minute hand", "second hand"]
+    },
+    "lamp": {
+      "synonyms": [
+        "light",
+        "light fixture",
+        "table lamp",
+        "floor lamp",
+        "lamps",
+        "lights",
+        "light fixtures",
+        "table lamps",
+        "floor lamps"
+      ]
+    },
+    "book": {
+      "synonyms": [
+        "novel",
+        "literature",
+        "text",
+        "manuscript",
+        "books",
+        "novels",
+        "literatures",
+        "texts",
+        "manuscripts"
+      ]
+    },
+    "key": {
+      "synonyms": [
+        "passkey",
+        "skeleton key",
+        "keycard",
+        "keys",
+        "passkeys",
+        "skeleton keys",
+        "keycards"
+      ]
+    },
+    "code": {
+      "synonyms": [
+        "passcode",
+        "code",
+        "combination",
+        "pin",
+        "password",
+        "access code",
+        "secret code",
+        "codes",
+        "combinations",
+        "pins",
+        "passwords",
+        "access codes",
+        "secret codes"
+      ]
+    },
+    "door": {
+      "synonyms": [
+        "portal door",
+        "entryway door",
+        "exit door",
+        "wooden door",
+        "hinged door",
+        "solid door",
+        "panel door",
+        "front door",
+        "back door",
+        "interior door",
+        "doors",
+        "portal doors",
+        "entryway doors",
+        "exit doors",
+        "wooden doors",
+        "hinged doors",
+        "solid doors",
+        "panel doors",
+        "front doors",
+        "back doors",
+        "interior doors"
+      ]
+    },
+    "window": {
+      "synonyms": [
+        "pane",
+        "glass",
+        "casement",
+        "sash",
+        "windows",
+        "panes",
+        "glasses",
+        "casements",
+        "sashes"
+      ]
+    },
+    "bookshelf": {
+      "synonyms": [
+        "bookcase",
+        "shelf",
+        "bookshelves",
+        "bookcases",
+        "shelves"
+      ]
+    },
+    "drawer": {
+      "synonyms": [
+        "compartment",
+        "cubbyhole",
+        "tray",
+        "sleeve",
+        "drawers",
+        "compartments",
+        "cubbyholes",
+        "trays",
+        "sleeves"
+      ]
+    },
+    "cabinet": {
+      "synonyms": [
+        "cupboard",
+        "wardrobe",
+        "locker",
+        "pantry",
+        "cabinets",
+        "cupboards",
+        "wardrobes",
+        "lockers",
+        "pantries"
+      ]
+    },
+    "mirror": {
+      "synonyms": [
+        "looking glass",
+        "reflective surface",
+        "mirrors",
+        "looking glasses",
+        "reflective surfaces"
+      ]
+    },
+    "picture": {
+      "synonyms": [
+        "painting",
+        "photograph",
+        "artwork",
+        "portrait",
+        "pictures",
+        "paintings",
+        "photographs",
+        "artworks",
+        "portraits"
+      ]
+    },
+    "rug": {
+      "synonyms": [
+        "carpet",
+        "mat",
+        "floor covering",
+        "area rug",
+        "rugs",
+        "carpets",
+        "mats",
+        "floor coverings",
+        "area rugs"
+      ]
+    },
+    "window blinds": {
+      "synonyms": [
+        "blinds",
+        "shades",
+        "curtains",
+        "drapes",
+        "window coverings",
+        "window blinds",
+        "window shades",
+        "window curtains",
+        "window drapes",
+        "window coverings"
+      ]
+    },
+    "shoe": {
+      "synonyms": [
+        "shoe",
+        "footwear",
+        "boot",
+        "sneaker",
+        "slipper"
+      ]
+    },
+    "toolbox": {
+      "synonyms": ["toolbox", "tool chest", "tool kit", "tool set", "tool case"]
+    },
+    "umbrella": {
+      "synonyms": ["umbrella", "parasol", "rain gear", "sunshade"]
+    },
+    "board": {
+      "synonyms": ["loose board", "floorboard", "panel", "plank", "slat", "board", "loose boards"]
+    },
+    "pen": {
+      "synonyms": ["pen", "writing instrument", "marker", "pencil", "stylus"]
+    },
+    "phone": {
+      "synonyms": ["phone", "telephone", "cell phone", "smartphone", "mobile device"]
+    },
+    "frame": {
+      "synonyms": ["picture frame", "photo frame", "painting frame", "art frame", "poster frame", "frame", "picture frames"]
+    },
+    "safe": {
+      "synonyms": ["safe", "strongbox", "vault", "lockbox", "safe-deposit box"]
+    },
+    "poster": {
+      "synonyms": ["posters"]
+    },
+    "drawing": {
+      "synonyms": ["drawings"]
+    },
+    "cell": {
+      "synonyms": ["cells","prison"]
+    },
+    "bed": {
+      "synonyms": ["beds"]
+    },
+    "wall": {
+      "synonyms": ["walls"]
+    }
+  }
+}

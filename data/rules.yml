@@ -1,0 +1,15 @@
+version: '3.1'
+rules:
+- rule: help
+  steps:
+  - intent: help
+  - action: utter_help
+  - action: action_interact
+- rule: start
+  steps:
+  - intent: start
+  - action: utter_start
+- rule: interact
+  steps:
+  - intent: interact
+  - action: action_interact

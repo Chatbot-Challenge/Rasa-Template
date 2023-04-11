@@ -1,0 +1,1064 @@
+version: '3.1'
+nlu:
+- intent: start
+  examples: |
+    - Start
+    - begin
+    - explain the setting
+- intent: help
+  examples: |
+    - how does this work?
+    - help
+    - what should I type?
+- intent: interact
+  examples: |
+    - Can you lift the [stools]{"entity":"object","group":"move"} to see if there's something underneath?
+    - I'm going to push the [bookshelf]{"entity":"object","group":"use"} to see if it triggers anything.
+    - Let's rotate the [shelf]{"entity":"object","group":"rotate"} to reveal a hidden passage.
+    - Can you insert the [books]{"entity":"object","group":"insert"} into the [code]{"entity":"object","group":"open"} to unlock the door?
+    - I'm going to grab the [interior door]{"entity":"object","group":"search"} to see if there's anything hidden inside.
+    - Let's shake the [casement]{"entity":"object","group":"shake"} to see if we can hear anything rattling inside.
+    - Can we look behind the [sofa]{"entity":"object","group":"search"} to see if there's a safe?
+    - Can you pull the [sash]{"entity":"object","group":"use"} to see what happens?
+    - Let's break open the [back door]{"entity":"object","group":"break"} to get the supplies inside.
+    - Can we close the [keycards]{"entity":"object","group":"close"} to see if it unlocks something?
+    - I'm going to explore the [front doors]{"entity":"object","group":"search"} for any hidden clues.
+    - Can you interact with the [window blinds]{"entity":"object","group":"use"} to access the hidden files?
+    - Let's lift the [stylus]{"entity":"object","group":"move"} to see what's inside the [strongbox]{"entity":"object","group":"open"}.
+    - Can we push the [button]{"entity":"object","group":"move"} to reveal a hidden room?
+    - Can you turn the [benches]{"entity":"object","group":"rotate"} to see if it's unlocked?
+    - Let's nudge the [back doors]{"entity":"object","group":"move"} to see if there's anything underneath.
+    - Can you manipulate the [cell phone]{"entity":"object","group":"open"} to see if it can be picked?
+    - Let's prod the [art frame]{"entity":"object","group":"move"} to see if it moves.
+    - Can you hoist the [solid doors]{"entity":"object","group":"move"} to see what's behind it?
+    - Let's wiggle the [sunshade]{"entity":"object","group":"move"} to see if it comes off.
+    - Can you operate the [passcode]{"entity":"object","group":"use"} to turn on the lights?
+    - Let's pull the [lockers]{"entity":"object","group":"move"} to see what it activates.
+    - Can you lift up the [codes]{"entity":"object","group":"move"} to see if there's a trapdoor?
+    - Let's fiddle with the [interior door]{"entity":"object","group":"rotate"} to see if it unlocks the safe.
+    - Can you pry the [pin]{"entity":"object","group":"move"} to see what's behind it?
+    - Let's explore the [front doors]{"entity":"object","group":"search"} for any hidden compartments.
+    - Can you press the [doors]{"entity":"object","group":"use"} to see if it triggers something?
+    - Let's pull the [window curtains]{"entity":"object","group":"use"} to see what it activates.
+    - Can you examine the [novels]{"entity":"object","group":"search"} for any hidden messages?
+    - I examine the [window drapes]{"entity":"object","group":"search"}
+    - Let's slide the [sleeve]{"entity":"object","group":"move"} to reveal a hidden room.
+    - Can you twist the [compartment]{"entity":"object","group":"rotate"} in the [floor coverings]{"entity":"object","group":"open"} to see if it unlocks?
+    - Let's move the [clock hand]{"entity":"object","group":"move"} and [novel]{"entity":"object","group":"move"} to see if there's a trapdoor.
+    - Can you use the [area rug]{"entity":"object","group":"rotate"} to remove the [shelves]{"entity":"object","group":"move"} and look inside?
+    - Let's pull the [pictures]{"entity":"object","group":"move"} and [exit doors]{"entity":"object","group":"use"} to reveal a hidden compartment.
+    - Can you shake the [access codes]{"entity":"object","group":"shake"} to see if there's anything hidden inside?
+    - Let's push the [blinds]{"entity":"object","group":"move"} or move the [tray]{"entity":"object","group":"move"} to see if there's a secret door.
+    - Can you insert the [panel door]{"entity":"object","group":"insert"} into the [toolbox]{"entity":"object","group":"use"} to unlock the door?
+    - Let's rotate the [table]{"entity":"object","group":"rotate"} and [carpet]{"entity":"object","group":"rotate"} to see if it triggers anything.
+    - Can you break the [keycard]{"entity":"object","group":"break"} with the [floor lamp]{"entity":"object","group":"use"} to reveal a hidden item?
+    - Let's lift the [front doors]{"entity":"object","group":"move"} and [safe]{"entity":"object","group":"move"} to see if there's a hidden switch.
+    - Can you use the [literature]{"entity":"object","group":"use"} to inspect the [chair]{"entity":"object","group":"search"} in the [trays]{"entity":"object","group":"search"}?
+    - Let's pull the [curtains]{"entity":"object","group":"move"} and [wardrobe]{"entity":"object","group":"move"} to see if there's a hidden trapdoor.
+    - Can you insert the [drawings]{"entity":"object","group":"insert"} into the [floor covering]{"entity":"object","group":"open"} to unlock the [clock hand]{"entity":"object","group":"open"}?
+    - Let's push the [light fixture]{"entity":"object","group":"move"} and [window coverings]{"entity":"object","group":"move"} to see if there's a hidden compartment in the [window drapes]{"entity":"object","group":"search"}.
+    - Can you use the [drawings]{"entity":"object","group":"use"} to examine the [photographs]{"entity":"object","group":"search"} for any hidden clues?
+    - Let's rotate the [prison]{"entity":"object","group":"rotate"} and [slat]{"entity":"object","group":"rotate"} to see if it unlocks the [casements]{"entity":"object","group":"open"}.
+    - Can you shake the [carpets]{"entity":"object","group":"shake"} to see if it reveals a hidden [entryway doors]{"entity":"object","group":"search"}?
+    - Let's break the [exit doors]{"entity":"object","group":"break"} with the [artwork]{"entity":"object","group":"use"} to see if there's a [lockbox]{"entity":"object","group":"search"} hidden inside.
+    - Can you lift the [poster]{"entity":"object","group":"move"} and [toolbox]{"entity":"object","group":"move"} to see if there's a hidden [key]{"entity":"object","group":"open"} underneath?
+    - Let's push the [pins]{"entity":"object","group":"move"} and [vault]{"entity":"object","group":"move"} to see if there's a hidden [shoe]{"entity":"object","group":"open"}.
+    - Can you use the [books]{"entity":"object","group":"use"} to retrieve the [smartphone]{"entity":"object","group":"search"} from the [window coverings]{"entity":"object","group":"search"}?
+    - We should explore the [loose board]{"entity":"object","group":"search"} for clues.
+    - The only way to interact with the [second hand]{"entity":"object","group":"use"} is to push the [button]{"entity":"object","group":"use"} on the base.
+    - I'm going to shake the [drawing]{"entity":"object","group":"shake"} and see if there's anything inside.
+    - The [artworks]{"entity":"object","group":"move"} on the wall seems to be hiding something, let's lift it up and take a look.
+    - We need to interact with the [toolbox]{"entity":"object","group":"use"} by inserting the [compartments]{"entity":"object","group":"insert"} into the port.
+    - Can we pull the [glass]{"entity":"object","group":"use"} to see what happens?
+    - I'm going to rotate the [desk]{"entity":"object","group":"rotate"} and see if it triggers anything.
+    - Let's break the [lamps]{"entity":"object","group":"break"} and see if there's anything hidden inside.
+    - We could try to insert the [floor lamp]{"entity":"object","group":"insert"} into the [keys]{"entity":"object","group":"use"} and see if anything happens.
+    - Can you grab the [desk]{"entity":"object","group":"insert"} and unlock the [clock hands]{"entity":"object","group":"open"}?
+    - Let's push the [button]{"entity":"object","group":"move"} on the [poster]{"entity":"object","group":"search"} and see if anything happens.
+    - I'm going to pull the [literatures]{"entity":"object","group":"move"} to see what's behind it.
+    - We need to insert the [light]{"entity":"object","group":"insert"} into the [desk]{"entity":"object","group":"use"} to make it work.
+    - The [secret codes]{"entity":"object","group":"open"} won't budge, can you shake it a little to loosen it up?
+    - Let's rotate the [pantries]{"entity":"object","group":"rotate"} and see if there's anything hidden inside.
+    - I'm going to lift the [bench]{"entity":"object","group":"move"} to see if there's a trapdoor underneath.
+    - Can we insert the [window coverings]{"entity":"object","group":"insert"} into the [looking glasses]{"entity":"object","group":"use"} and see what happens?
+    - We should explore the [phone]{"entity":"object","group":"search"} for any hidden compartments.
+    - Let's push the [button]{"entity":"object","group":"use"} on the [stools]{"entity":"object","group":"search"} and see if it does anything.
+    - I'm going to pull the [password]{"entity":"object","group":"move"} on the [sofas]{"entity":"object","group":"open"} and see if it's locked.
+    - Can we break the [passwords]{"entity":"object","group":"break"} on the [art frame]{"entity":"object","group":"open"} and see what's inside?
+    - We need to insert the [rugs]{"entity":"object","group":"insert"} into the [panel doors]{"entity":"object","group":"open"} to open the [loose boards]{"entity":"object","group":"open"}.
+    - Can you shut [lockers]{"entity":"object", "group":"close"} to keep the cold out?
+    - Pull [photograph]{"entity":"object", "group":"close"} to block the light.
+    - I think we should seal [loose board]{"entity":"object", "group":"close"} before they come.
+    - Twist the [area rugs]{"entity":"object", "group":"rotate"} to close [tool chest]{"entity":"object", "group":"close"} and secure the money.
+    - Can you snap [sneaker]{"entity":"object", "group":"close"} to prevent the box from opening?
+    - We need to bolt [phone]{"entity":"object", "group":"close"} to prevent them from coming up.
+    - Let's slide [shoe]{"entity":"object", "group":"close"} to hide the documents.
+    - Can you cover [drawer]{"entity":"object", "group":"close"} with a [light fixtures]{"entity":"object", "group":"move"} to hide the sound?
+    - Push [table lamps]{"entity":"object", "group":"close"} to keep the smell in.
+    - We should clip [toolbox]{"entity":"object", "group":"close"} to keep the backpack from opening.
+    - Shatter the [interior doors]{"entity":"object", "group":"break"}.
+    - I want to look at the [shoe]{"entity":"object", "group":"search"}.
+    - Can I look around the [sleeve]{"entity":"object", "group":"search"}.
+    - Find the [reflective surfaces]{"entity":"object", "group":"search"}.
+    - Can I find something on the [window curtains]{"entity":"object", "group":"search"}?
+    - Take the [panel doors]{"entity":"object", "group":"move"} off the [board]{"entity":"object", "group":"search"}!
+    - I open the [casements]{"entity":"object", "group":"open"}
+    - I look around the [novel]{"entity":"object", "group":"search"}
+    - I look at the [pane]{"entity":"object", "group":"search"}
+    - I inspect the [clock hands]{"entity":"object", "group":"search"}
+    - I search the [drawers]{"entity":"object", "group":"search"}
+    - search the [panel]{"entity":"object", "group":"search"}
+    - look at [drapes]{"entity":"object", "group":"search"}
+    - find [bookshelves]{"entity":"object", "group":"search"}
+    - open [windows]{"entity":"object", "group":"open"}
+    - close [password]{"entity":"object", "group":"close"}
+    - rotate [mobile device]{"entity":"object", "group":"rotate"}
+    - move [bookshelves]{"entity":"object", "group":"move"}
+    - break [seats]{"entity":"object", "group":"break"}
+    - use [tray]{"entity":"object", "group":"use"}
+    - shake [secret code]{"entity":"object", "group":"shake"}
+    - Can you lift the [back doors]{"entity":"object","group":"move"} to see if there's something underneath?
+    - I'm going to push the [drapes]{"entity":"object","group":"use"} to see if it triggers anything.
+    - Let's rotate the [pen]{"entity":"object","group":"rotate"} to reveal a hidden passage.
+    - Can you insert the [board]{"entity":"object","group":"insert"} into the [skeleton key]{"entity":"object","group":"open"} to unlock the door?
+    - I'm going to grab the [stool]{"entity":"object","group":"search"} to see if there's anything hidden inside.
+    - Let's shake the [sofas]{"entity":"object","group":"shake"} to see if we can hear anything rattling inside.
+    - Can we look behind the [exit door]{"entity":"object","group":"search"} to see if there's a safe?
+    - Can you pull the [shelf]{"entity":"object","group":"use"} to see what happens?
+    - Let's break open the [window]{"entity":"object","group":"break"} to get the supplies inside.
+    - Can we close the [seats]{"entity":"object","group":"close"} to see if it unlocks something?
+    - I'm going to explore the [casement]{"entity":"object","group":"search"} for any hidden clues.
+    - Can you interact with the [book]{"entity":"object","group":"use"} to access the hidden files?
+    - Let's lift the [tool set]{"entity":"object","group":"move"} to see what's inside the [window blinds]{"entity":"object","group":"open"}.
+    - Can we push the [button]{"entity":"object","group":"move"} to reveal a hidden room?
+    - Can you turn the [sunshade]{"entity":"object","group":"rotate"} to see if it's unlocked?
+    - Let's nudge the [safe]{"entity":"object","group":"move"} to see if there's anything underneath.
+    - Can you manipulate the [phone]{"entity":"object","group":"open"} to see if it can be picked?
+    - Let's prod the [umbrella]{"entity":"object","group":"move"} to see if it moves.
+    - Can you hoist the [poster frame]{"entity":"object","group":"move"} to see what's behind it?
+    - Let's wiggle the [keycards]{"entity":"object","group":"move"} to see if it comes off.
+    - Can you operate the [locker]{"entity":"object","group":"use"} to turn on the lights?
+    - Let's pull the [safe]{"entity":"object","group":"move"} to see what it activates.
+    - Can you lift up the [light fixtures]{"entity":"object","group":"move"} to see if there's a trapdoor?
+    - Let's fiddle with the [parasol]{"entity":"object","group":"rotate"} to see if it unlocks the safe.
+    - Can you pry the [tables]{"entity":"object","group":"move"} to see what's behind it?
+    - Let's explore the [table]{"entity":"object","group":"search"} for any hidden compartments.
+    - Can you press the [glass]{"entity":"object","group":"use"} to see if it triggers something?
+    - Let's pull the [lamps]{"entity":"object","group":"use"} to see what it activates.
+    - Can you examine the [rug]{"entity":"object","group":"search"} for any hidden messages?
+    - I examine the [bookcases]{"entity":"object","group":"search"}
+    - Let's slide the [bookshelf]{"entity":"object","group":"move"} to reveal a hidden room.
+    - Can you twist the [floor lamp]{"entity":"object","group":"rotate"} in the [floor covering]{"entity":"object","group":"open"} to see if it unlocks?
+    - Let's move the [pencil]{"entity":"object","group":"move"} and [pencil]{"entity":"object","group":"move"} to see if there's a trapdoor.
+    - Can you use the [cabinet]{"entity":"object","group":"rotate"} to remove the [chairs]{"entity":"object","group":"move"} and look inside?
+    - Let's pull the [posters]{"entity":"object","group":"move"} and [shelf]{"entity":"object","group":"use"} to reveal a hidden compartment.
+    - Can you shake the [entryway door]{"entity":"object","group":"shake"} to see if there's anything hidden inside?
+    - Let's push the [countertop]{"entity":"object","group":"move"} or move the [front doors]{"entity":"object","group":"move"} to see if there's a secret door.
+    - Can you insert the [password]{"entity":"object","group":"insert"} into the [walls]{"entity":"object","group":"use"} to unlock the door?
+    - Let's rotate the [casements]{"entity":"object","group":"rotate"} and [light fixtures]{"entity":"object","group":"rotate"} to see if it triggers anything.
+    - Can you break the [pen]{"entity":"object","group":"break"} with the [picture frames]{"entity":"object","group":"use"} to reveal a hidden item?
+    - Let's lift the [pen]{"entity":"object","group":"move"} and [skeleton key]{"entity":"object","group":"move"} to see if there's a hidden switch.
+    - Can you use the [password]{"entity":"object","group":"use"} to inspect the [panel]{"entity":"object","group":"search"} in the [phone]{"entity":"object","group":"search"}?
+    - Let's pull the [cupboard]{"entity":"object","group":"move"} and [mirrors]{"entity":"object","group":"move"} to see if there's a hidden trapdoor.
+    - Can you insert the [lockers]{"entity":"object","group":"insert"} into the [table lamps]{"entity":"object","group":"open"} to unlock the [novels]{"entity":"object","group":"open"}?
+    - Let's push the [bookshelf]{"entity":"object","group":"move"} and [password]{"entity":"object","group":"move"} to see if there's a hidden compartment in the [floor lamp]{"entity":"object","group":"search"}.
+    - Can you use the [plank]{"entity":"object","group":"use"} to examine the [exit door]{"entity":"object","group":"search"} for any hidden clues?
+    - Let's rotate the [rugs]{"entity":"object","group":"rotate"} and [sofas]{"entity":"object","group":"rotate"} to see if it unlocks the [shoe]{"entity":"object","group":"open"}.
+    - Can you shake the [passkey]{"entity":"object","group":"shake"} to see if it reveals a hidden [poster frame]{"entity":"object","group":"search"}?
+    - Let's break the [exit door]{"entity":"object","group":"break"} with the [hinged door]{"entity":"object","group":"use"} to see if there's a [interior door]{"entity":"object","group":"search"} hidden inside.
+    - Can you lift the [floor coverings]{"entity":"object","group":"move"} and [wardrobe]{"entity":"object","group":"move"} to see if there's a hidden [cubbyholes]{"entity":"object","group":"open"} underneath?
+    - Let's push the [locker]{"entity":"object","group":"move"} and [mirrors]{"entity":"object","group":"move"} to see if there's a hidden [portal door]{"entity":"object","group":"open"}.
+    - Can you use the [passcode]{"entity":"object","group":"use"} to retrieve the [table lamp]{"entity":"object","group":"search"} from the [seats]{"entity":"object","group":"search"}?
+    - We should explore the [bookcase]{"entity":"object","group":"search"} for clues.
+    - The only way to interact with the [pen]{"entity":"object","group":"use"} is to push the [button]{"entity":"object","group":"use"} on the base.
+    - I'm going to shake the [vault]{"entity":"object","group":"shake"} and see if there's anything inside.
+    - The [drapes]{"entity":"object","group":"move"} on the wall seems to be hiding something, let's lift it up and take a look.
+    - We need to interact with the [painting frame]{"entity":"object","group":"use"} by inserting the [toolbox]{"entity":"object","group":"insert"} into the port.
+    - Can we pull the [cell]{"entity":"object","group":"use"} to see what happens?
+    - I'm going to rotate the [cabinet]{"entity":"object","group":"rotate"} and see if it triggers anything.
+    - Let's break the [reflective surfaces]{"entity":"object","group":"break"} and see if there's anything hidden inside.
+    - We could try to insert the [text]{"entity":"object","group":"insert"} into the [light fixtures]{"entity":"object","group":"use"} and see if anything happens.
+    - Can you grab the [art frame]{"entity":"object","group":"insert"} and unlock the [seats]{"entity":"object","group":"open"}?
+    - Let's push the [button]{"entity":"object","group":"move"} on the [hands]{"entity":"object","group":"search"} and see if anything happens.
+    - I'm going to pull the [bookcases]{"entity":"object","group":"move"} to see what's behind it.
+    - We need to insert the [pantry]{"entity":"object","group":"insert"} into the [windows]{"entity":"object","group":"use"} to make it work.
+    - The [wooden door]{"entity":"object","group":"open"} won't budge, can you shake it a little to loosen it up?
+    - Let's rotate the [table lamps]{"entity":"object","group":"rotate"} and see if there's anything hidden inside.
+    - I'm going to lift the [mirrors]{"entity":"object","group":"move"} to see if there's a trapdoor underneath.
+    - Can we insert the [second hand]{"entity":"object","group":"insert"} into the [tables]{"entity":"object","group":"use"} and see what happens?
+    - We should explore the [workbenches]{"entity":"object","group":"search"} for any hidden compartments.
+    - Let's push the [button]{"entity":"object","group":"use"} on the [mobile device]{"entity":"object","group":"search"} and see if it does anything.
+    - I'm going to pull the [carpet]{"entity":"object","group":"move"} on the [solid door]{"entity":"object","group":"open"} and see if it's locked.
+    - Can we break the [prison]{"entity":"object","group":"break"} on the [casements]{"entity":"object","group":"open"} and see what's inside?
+    - We need to insert the [manuscripts]{"entity":"object","group":"insert"} into the [sneaker]{"entity":"object","group":"open"} to open the [strongbox]{"entity":"object","group":"open"}.
+    - Can you shut [safe-deposit box]{"entity":"object", "group":"close"} to keep the cold out?
+    - Pull [floor coverings]{"entity":"object", "group":"close"} to block the light.
+    - I think we should seal [manuscript]{"entity":"object", "group":"close"} before they come.
+    - Twist the [combinations]{"entity":"object", "group":"rotate"} to close [safe]{"entity":"object", "group":"close"} and secure the money.
+    - Can you snap [clock hand]{"entity":"object", "group":"close"} to prevent the box from opening?
+    - We need to bolt [pen]{"entity":"object", "group":"close"} to prevent them from coming up.
+    - Let's slide [exit doors]{"entity":"object", "group":"close"} to hide the documents.
+    - Can you cover [drawings]{"entity":"object", "group":"close"} with a [bench]{"entity":"object", "group":"move"} to hide the sound?
+    - Push [footwear]{"entity":"object", "group":"close"} to keep the smell in.
+    - We should clip [mat]{"entity":"object", "group":"close"} to keep the backpack from opening.
+    - Shatter the [mat]{"entity":"object", "group":"break"}.
+    - I want to look at the [codes]{"entity":"object", "group":"search"}.
+    - Can I look around the [painting]{"entity":"object", "group":"search"}.
+    - Find the [tool kit]{"entity":"object", "group":"search"}.
+    - Can I find something on the [mirrors]{"entity":"object", "group":"search"}?
+    - Take the [looking glass]{"entity":"object", "group":"move"} off the [floor lamps]{"entity":"object", "group":"search"}!
+    - I open the [floorboard]{"entity":"object", "group":"open"}
+    - I look around the [compartment]{"entity":"object", "group":"search"}
+    - I look at the [hinged door]{"entity":"object", "group":"search"}
+    - I inspect the [password]{"entity":"object", "group":"search"}
+    - I search the [pen]{"entity":"object", "group":"search"}
+    - search the [bed]{"entity":"object", "group":"search"}
+    - look at [panel]{"entity":"object", "group":"search"}
+    - find [blinds]{"entity":"object", "group":"search"}
+    - open [interior doors]{"entity":"object", "group":"open"}
+    - close [drapes]{"entity":"object", "group":"close"}
+    - rotate [painting frame]{"entity":"object", "group":"rotate"}
+    - move [surface]{"entity":"object", "group":"move"}
+    - break [exit door]{"entity":"object", "group":"break"}
+    - use [cupboards]{"entity":"object", "group":"use"}
+    - shake [chair]{"entity":"object", "group":"shake"}
+    - Can you lift the [artwork]{"entity":"object","group":"move"} to see if there's something underneath?
+    - I'm going to push the [board]{"entity":"object","group":"use"} to see if it triggers anything.
+    - Let's rotate the [workbench]{"entity":"object","group":"rotate"} to reveal a hidden passage.
+    - Can you insert the [writing instrument]{"entity":"object","group":"insert"} into the [wardrobe]{"entity":"object","group":"open"} to unlock the door?
+    - I'm going to grab the [rugs]{"entity":"object","group":"search"} to see if there's anything hidden inside.
+    - Let's shake the [texts]{"entity":"object","group":"shake"} to see if we can hear anything rattling inside.
+    - Can we look behind the [telephone]{"entity":"object","group":"search"} to see if there's a safe?
+    - Can you pull the [minute hand]{"entity":"object","group":"use"} to see what happens?
+    - Let's break open the [writing instrument]{"entity":"object","group":"break"} to get the supplies inside.
+    - Can we close the [glasses]{"entity":"object","group":"close"} to see if it unlocks something?
+    - I'm going to explore the [clock hand]{"entity":"object","group":"search"} for any hidden clues.
+    - Can you interact with the [drapes]{"entity":"object","group":"use"} to access the hidden files?
+    - Let's lift the [writing instrument]{"entity":"object","group":"move"} to see what's inside the [floor lamps]{"entity":"object","group":"open"}.
+    - Can we push the [button]{"entity":"object","group":"move"} to reveal a hidden room?
+    - Can you turn the [prison]{"entity":"object","group":"rotate"} to see if it's unlocked?
+    - Let's nudge the [area rugs]{"entity":"object","group":"move"} to see if there's anything underneath.
+    - Can you manipulate the [surface]{"entity":"object","group":"open"} to see if it can be picked?
+    - Let's prod the [photographs]{"entity":"object","group":"move"} to see if it moves.
+    - Can you hoist the [code]{"entity":"object","group":"move"} to see what's behind it?
+    - Let's wiggle the [photo frame]{"entity":"object","group":"move"} to see if it comes off.
+    - Can you operate the [stylus]{"entity":"object","group":"use"} to turn on the lights?
+    - Let's pull the [footwear]{"entity":"object","group":"move"} to see what it activates.
+    - Can you lift up the [floor lamps]{"entity":"object","group":"move"} to see if there's a trapdoor?
+    - Let's fiddle with the [code]{"entity":"object","group":"rotate"} to see if it unlocks the safe.
+    - Can you pry the [access code]{"entity":"object","group":"move"} to see what's behind it?
+    - Let's explore the [cupboards]{"entity":"object","group":"search"} for any hidden compartments.
+    - Can you press the [interior doors]{"entity":"object","group":"use"} to see if it triggers something?
+    - Let's pull the [portraits]{"entity":"object","group":"use"} to see what it activates.
+    - Can you examine the [table]{"entity":"object","group":"search"} for any hidden messages?
+    - I examine the [casement]{"entity":"object","group":"search"}
+    - Let's slide the [combination]{"entity":"object","group":"move"} to reveal a hidden room.
+    - Can you twist the [pencil]{"entity":"object","group":"rotate"} in the [phone]{"entity":"object","group":"open"} to see if it unlocks?
+    - Let's move the [window blinds]{"entity":"object","group":"move"} and [secret code]{"entity":"object","group":"move"} to see if there's a trapdoor.
+    - Can you use the [bed]{"entity":"object","group":"rotate"} to remove the [solid door]{"entity":"object","group":"move"} and look inside?
+    - Let's pull the [shoe]{"entity":"object","group":"move"} and [keys]{"entity":"object","group":"use"} to reveal a hidden compartment.
+    - Can you shake the [sofas]{"entity":"object","group":"shake"} to see if there's anything hidden inside?
+    - Let's push the [slipper]{"entity":"object","group":"move"} or move the [cupboards]{"entity":"object","group":"move"} to see if there's a secret door.
+    - Can you insert the [looking glass]{"entity":"object","group":"insert"} into the [surfaces]{"entity":"object","group":"use"} to unlock the door?
+    - Let's rotate the [bed]{"entity":"object","group":"rotate"} and [cubbyhole]{"entity":"object","group":"rotate"} to see if it triggers anything.
+    - Can you break the [telephone]{"entity":"object","group":"break"} with the [stools]{"entity":"object","group":"use"} to reveal a hidden item?
+    - Let's lift the [window shades]{"entity":"object","group":"move"} and [safe]{"entity":"object","group":"move"} to see if there's a hidden switch.
+    - Can you use the [window drapes]{"entity":"object","group":"use"} to inspect the [wardrobe]{"entity":"object","group":"search"} in the [pencil]{"entity":"object","group":"search"}?
+    - Let's pull the [sleeves]{"entity":"object","group":"move"} and [text]{"entity":"object","group":"move"} to see if there's a hidden trapdoor.
+    - Can you insert the [photograph]{"entity":"object","group":"insert"} into the [posters]{"entity":"object","group":"open"} to unlock the [solid door]{"entity":"object","group":"open"}?
+    - Let's push the [window curtains]{"entity":"object","group":"move"} and [combinations]{"entity":"object","group":"move"} to see if there's a hidden compartment in the [cupboards]{"entity":"object","group":"search"}.
+    - Can you use the [access code]{"entity":"object","group":"use"} to examine the [light fixture]{"entity":"object","group":"search"} for any hidden clues?
+    - Let's rotate the [painting frame]{"entity":"object","group":"rotate"} and [frame]{"entity":"object","group":"rotate"} to see if it unlocks the [tray]{"entity":"object","group":"open"}.
+    - Can you shake the [looking glass]{"entity":"object","group":"shake"} to see if it reveals a hidden [poster frame]{"entity":"object","group":"search"}?
+    - Let's break the [windows]{"entity":"object","group":"break"} with the [doors]{"entity":"object","group":"use"} to see if there's a [sashes]{"entity":"object","group":"search"} hidden inside.
+    - Can you lift the [pen]{"entity":"object","group":"move"} and [window drapes]{"entity":"object","group":"move"} to see if there's a hidden [casement]{"entity":"object","group":"open"} underneath?
+    - Let's push the [marker]{"entity":"object","group":"move"} and [lockers]{"entity":"object","group":"move"} to see if there's a hidden [codes]{"entity":"object","group":"open"}.
+    - Can you use the [passkeys]{"entity":"object","group":"use"} to retrieve the [art frame]{"entity":"object","group":"search"} from the [desks]{"entity":"object","group":"search"}?
+    - We should explore the [slat]{"entity":"object","group":"search"} for clues.
+    - The only way to interact with the [cupboard]{"entity":"object","group":"use"} is to push the [button]{"entity":"object","group":"use"} on the base.
+    - I'm going to shake the [prison]{"entity":"object","group":"shake"} and see if there's anything inside.
+    - The [countertops]{"entity":"object","group":"move"} on the wall seems to be hiding something, let's lift it up and take a look.
+    - We need to interact with the [light fixture]{"entity":"object","group":"use"} by inserting the [slipper]{"entity":"object","group":"insert"} into the port.
+    - Can we pull the [countertops]{"entity":"object","group":"use"} to see what happens?
+    - I'm going to rotate the [looking glass]{"entity":"object","group":"rotate"} and see if it triggers anything.
+    - Let's break the [trays]{"entity":"object","group":"break"} and see if there's anything hidden inside.
+    - We could try to insert the [picture frames]{"entity":"object","group":"insert"} into the [light fixture]{"entity":"object","group":"use"} and see if anything happens.
+    - Can you grab the [picture]{"entity":"object","group":"insert"} and unlock the [pane]{"entity":"object","group":"open"}?
+    - Let's push the [button]{"entity":"object","group":"move"} on the [benches]{"entity":"object","group":"search"} and see if anything happens.
+    - I'm going to pull the [manuscripts]{"entity":"object","group":"move"} to see what's behind it.
+    - We need to insert the [tool set]{"entity":"object","group":"insert"} into the [desk]{"entity":"object","group":"use"} to make it work.
+    - The [wardrobes]{"entity":"object","group":"open"} won't budge, can you shake it a little to loosen it up?
+    - Let's rotate the [stools]{"entity":"object","group":"rotate"} and see if there's anything hidden inside.
+    - I'm going to lift the [wall]{"entity":"object","group":"move"} to see if there's a trapdoor underneath.
+    - Can we insert the [board]{"entity":"object","group":"insert"} into the [mirrors]{"entity":"object","group":"use"} and see what happens?
+    - We should explore the [cell]{"entity":"object","group":"search"} for any hidden compartments.
+    - Let's push the [button]{"entity":"object","group":"use"} on the [umbrella]{"entity":"object","group":"search"} and see if it does anything.
+    - I'm going to pull the [mirror]{"entity":"object","group":"move"} on the [interior door]{"entity":"object","group":"open"} and see if it's locked.
+    - Can we break the [door]{"entity":"object","group":"break"} on the [minute hand]{"entity":"object","group":"open"} and see what's inside?
+    - We need to insert the [sleeve]{"entity":"object","group":"insert"} into the [frame]{"entity":"object","group":"open"} to open the [exit doors]{"entity":"object","group":"open"}.
+    - Can you shut [access codes]{"entity":"object", "group":"close"} to keep the cold out?
+    - Pull [bookshelves]{"entity":"object", "group":"close"} to block the light.
+    - I think we should seal [shoe]{"entity":"object", "group":"close"} before they come.
+    - Twist the [cell]{"entity":"object", "group":"rotate"} to close [panel doors]{"entity":"object", "group":"close"} and secure the money.
+    - Can you snap [light fixture]{"entity":"object", "group":"close"} to prevent the box from opening?
+    - We need to bolt [safe]{"entity":"object", "group":"close"} to prevent them from coming up.
+    - Let's slide [pictures]{"entity":"object", "group":"close"} to hide the documents.
+    - Can you cover [smartphone]{"entity":"object", "group":"close"} with a [interior door]{"entity":"object", "group":"move"} to hide the sound?
+    - Push [combinations]{"entity":"object", "group":"close"} to keep the smell in.
+    - We should clip [drawings]{"entity":"object", "group":"close"} to keep the backpack from opening.
+    - Shatter the [table]{"entity":"object", "group":"break"}.
+    - I want to look at the [pen]{"entity":"object", "group":"search"}.
+    - Can I look around the [poster]{"entity":"object", "group":"search"}.
+    - Find the [portal doors]{"entity":"object", "group":"search"}.
+    - Can I find something on the [marker]{"entity":"object", "group":"search"}?
+    - Take the [lockbox]{"entity":"object", "group":"move"} off the [clock hands]{"entity":"object", "group":"search"}!
+    - I open the [countertops]{"entity":"object", "group":"open"}
+    - I look around the [bookcase]{"entity":"object", "group":"search"}
+    - I look at the [floor coverings]{"entity":"object", "group":"search"}
+    - I inspect the [safe]{"entity":"object", "group":"search"}
+    - I search the [seat]{"entity":"object", "group":"search"}
+    - search the [shades]{"entity":"object", "group":"search"}
+    - look at [floor lamp]{"entity":"object", "group":"search"}
+    - find [countertop]{"entity":"object", "group":"search"}
+    - open [drawings]{"entity":"object", "group":"open"}
+    - close [tables]{"entity":"object", "group":"close"}
+    - rotate [pantries]{"entity":"object", "group":"rotate"}
+    - move [books]{"entity":"object", "group":"move"}
+    - break [drawers]{"entity":"object", "group":"break"}
+    - use [picture]{"entity":"object", "group":"use"}
+    - shake [exit doors]{"entity":"object", "group":"shake"}
+    - Can you lift the [hour hand]{"entity":"object","group":"move"} to see if there's something underneath?
+    - I'm going to push the [shoe]{"entity":"object","group":"use"} to see if it triggers anything.
+    - Let's rotate the [artwork]{"entity":"object","group":"rotate"} to reveal a hidden passage.
+    - Can you insert the [cupboard]{"entity":"object","group":"insert"} into the [shoe]{"entity":"object","group":"open"} to unlock the door?
+    - I'm going to grab the [floor lamp]{"entity":"object","group":"search"} to see if there's anything hidden inside.
+    - Let's shake the [tool case]{"entity":"object","group":"shake"} to see if we can hear anything rattling inside.
+    - Can we look behind the [boot]{"entity":"object","group":"search"} to see if there's a safe?
+    - Can you pull the [phone]{"entity":"object","group":"use"} to see what happens?
+    - Let's break open the [skeleton keys]{"entity":"object","group":"break"} to get the supplies inside.
+    - Can we close the [reflective surface]{"entity":"object","group":"close"} to see if it unlocks something?
+    - I'm going to explore the [seats]{"entity":"object","group":"search"} for any hidden clues.
+    - Can you interact with the [wooden door]{"entity":"object","group":"use"} to access the hidden files?
+    - Let's lift the [shelf]{"entity":"object","group":"move"} to see what's inside the [board]{"entity":"object","group":"open"}.
+    - Can we push the [button]{"entity":"object","group":"move"} to reveal a hidden room?
+    - Can you turn the [cabinets]{"entity":"object","group":"rotate"} to see if it's unlocked?
+    - Let's nudge the [board]{"entity":"object","group":"move"} to see if there's anything underneath.
+    - Can you manipulate the [window blinds]{"entity":"object","group":"open"} to see if it can be picked?
+    - Let's prod the [countertop]{"entity":"object","group":"move"} to see if it moves.
+    - Can you hoist the [compartments]{"entity":"object","group":"move"} to see what's behind it?
+    - Let's wiggle the [locker]{"entity":"object","group":"move"} to see if it comes off.
+    - Can you operate the [text]{"entity":"object","group":"use"} to turn on the lights?
+    - Let's pull the [floor covering]{"entity":"object","group":"move"} to see what it activates.
+    - Can you lift up the [pin]{"entity":"object","group":"move"} to see if there's a trapdoor?
+    - Let's fiddle with the [keycard]{"entity":"object","group":"rotate"} to see if it unlocks the safe.
+    - Can you pry the [window coverings]{"entity":"object","group":"move"} to see what's behind it?
+    - Let's explore the [smartphone]{"entity":"object","group":"search"} for any hidden compartments.
+    - Can you press the [hinged doors]{"entity":"object","group":"use"} to see if it triggers something?
+    - Let's pull the [portal door]{"entity":"object","group":"use"} to see what it activates.
+    - Can you examine the [second hand]{"entity":"object","group":"search"} for any hidden messages?
+    - I examine the [codes]{"entity":"object","group":"search"}
+    - Let's slide the [pantries]{"entity":"object","group":"move"} to reveal a hidden room.
+    - Can you twist the [door]{"entity":"object","group":"rotate"} in the [bookcases]{"entity":"object","group":"open"} to see if it unlocks?
+    - Let's move the [cubbyhole]{"entity":"object","group":"move"} and [mat]{"entity":"object","group":"move"} to see if there's a trapdoor.
+    - Can you use the [board]{"entity":"object","group":"rotate"} to remove the [frame]{"entity":"object","group":"move"} and look inside?
+    - Let's pull the [marker]{"entity":"object","group":"move"} and [passwords]{"entity":"object","group":"use"} to reveal a hidden compartment.
+    - Can you shake the [frame]{"entity":"object","group":"shake"} to see if there's anything hidden inside?
+    - Let's push the [novels]{"entity":"object","group":"move"} or move the [codes]{"entity":"object","group":"move"} to see if there's a secret door.
+    - Can you insert the [wooden doors]{"entity":"object","group":"insert"} into the [blinds]{"entity":"object","group":"use"} to unlock the door?
+    - Let's rotate the [window drapes]{"entity":"object","group":"rotate"} and [area rug]{"entity":"object","group":"rotate"} to see if it triggers anything.
+    - Can you break the [telephone]{"entity":"object","group":"break"} with the [doors]{"entity":"object","group":"use"} to reveal a hidden item?
+    - Let's lift the [window coverings]{"entity":"object","group":"move"} and [carpets]{"entity":"object","group":"move"} to see if there's a hidden switch.
+    - Can you use the [key]{"entity":"object","group":"use"} to inspect the [umbrella]{"entity":"object","group":"search"} in the [doors]{"entity":"object","group":"search"}?
+    - Let's pull the [bookshelf]{"entity":"object","group":"move"} and [doors]{"entity":"object","group":"move"} to see if there's a hidden trapdoor.
+    - Can you insert the [safe]{"entity":"object","group":"insert"} into the [seat]{"entity":"object","group":"open"} to unlock the [passkeys]{"entity":"object","group":"open"}?
+    - Let's push the [loose boards]{"entity":"object","group":"move"} and [rugs]{"entity":"object","group":"move"} to see if there's a hidden compartment in the [toolbox]{"entity":"object","group":"search"}.
+    - Can you use the [photograph]{"entity":"object","group":"use"} to examine the [shelf]{"entity":"object","group":"search"} for any hidden clues?
+    - Let's rotate the [drawer]{"entity":"object","group":"rotate"} and [telephone]{"entity":"object","group":"rotate"} to see if it unlocks the [tool kit]{"entity":"object","group":"open"}.
+    - Can you shake the [lockers]{"entity":"object","group":"shake"} to see if it reveals a hidden [sleeve]{"entity":"object","group":"search"}?
+    - Let's break the [sash]{"entity":"object","group":"break"} with the [skeleton keys]{"entity":"object","group":"use"} to see if there's a [wall]{"entity":"object","group":"search"} hidden inside.
+    - Can you lift the [frame]{"entity":"object","group":"move"} and [cabinet]{"entity":"object","group":"move"} to see if there's a hidden [loose boards]{"entity":"object","group":"open"} underneath?
+    - Let's push the [surface]{"entity":"object","group":"move"} and [bookshelf]{"entity":"object","group":"move"} to see if there's a hidden [wooden doors]{"entity":"object","group":"open"}.
+    - Can you use the [shades]{"entity":"object","group":"use"} to retrieve the [sofa]{"entity":"object","group":"search"} from the [bookcase]{"entity":"object","group":"search"}?
+    - We should explore the [rain gear]{"entity":"object","group":"search"} for clues.
+    - The only way to interact with the [passkeys]{"entity":"object","group":"use"} is to push the [button]{"entity":"object","group":"use"} on the base.
+    - I'm going to shake the [sunshade]{"entity":"object","group":"shake"} and see if there's anything inside.
+    - The [pantry]{"entity":"object","group":"move"} on the wall seems to be hiding something, let's lift it up and take a look.
+    - We need to interact with the [floor lamp]{"entity":"object","group":"use"} by inserting the [telephone]{"entity":"object","group":"insert"} into the port.
+    - Can we pull the [mirror]{"entity":"object","group":"use"} to see what happens?
+    - I'm going to rotate the [sofas]{"entity":"object","group":"rotate"} and see if it triggers anything.
+    - Let's break the [picture]{"entity":"object","group":"break"} and see if there's anything hidden inside.
+    - We could try to insert the [art frame]{"entity":"object","group":"insert"} into the [pen]{"entity":"object","group":"use"} and see if anything happens.
+    - Can you grab the [texts]{"entity":"object","group":"insert"} and unlock the [cabinets]{"entity":"object","group":"open"}?
+    - Let's push the [button]{"entity":"object","group":"move"} on the [sunshade]{"entity":"object","group":"search"} and see if anything happens.
+    - I'm going to pull the [safe-deposit box]{"entity":"object","group":"move"} to see what's behind it.
+    - We need to insert the [keys]{"entity":"object","group":"insert"} into the [bookcase]{"entity":"object","group":"use"} to make it work.
+    - The [keycards]{"entity":"object","group":"open"} won't budge, can you shake it a little to loosen it up?
+    - Let's rotate the [drawers]{"entity":"object","group":"rotate"} and see if there's anything hidden inside.
+    - I'm going to lift the [desks]{"entity":"object","group":"move"} to see if there's a trapdoor underneath.
+    - Can we insert the [bookshelf]{"entity":"object","group":"insert"} into the [panel]{"entity":"object","group":"use"} and see what happens?
+    - We should explore the [secret codes]{"entity":"object","group":"search"} for any hidden compartments.
+    - Let's push the [button]{"entity":"object","group":"use"} on the [code]{"entity":"object","group":"search"} and see if it does anything.
+    - I'm going to pull the [cells]{"entity":"object","group":"move"} on the [solid doors]{"entity":"object","group":"open"} and see if it's locked.
+    - Can we break the [chairs]{"entity":"object","group":"break"} on the [floor lamps]{"entity":"object","group":"open"} and see what's inside?
+    - We need to insert the [frame]{"entity":"object","group":"insert"} into the [locker]{"entity":"object","group":"open"} to open the [keys]{"entity":"object","group":"open"}.
+    - Can you shut [pen]{"entity":"object", "group":"close"} to keep the cold out?
+    - Pull [book]{"entity":"object", "group":"close"} to block the light.
+    - I think we should seal [painting]{"entity":"object", "group":"close"} before they come.
+    - Twist the [safe]{"entity":"object", "group":"rotate"} to close [shelves]{"entity":"object", "group":"close"} and secure the money.
+    - Can you snap [interior doors]{"entity":"object", "group":"close"} to prevent the box from opening?
+    - We need to bolt [workbench]{"entity":"object", "group":"close"} to prevent them from coming up.
+    - Let's slide [access codes]{"entity":"object", "group":"close"} to hide the documents.
+    - Can you cover [window blinds]{"entity":"object", "group":"close"} with a [pantry]{"entity":"object", "group":"move"} to hide the sound?
+    - Push [window coverings]{"entity":"object", "group":"close"} to keep the smell in.
+    - We should clip [looking glass]{"entity":"object", "group":"close"} to keep the backpack from opening.
+    - Shatter the [light fixture]{"entity":"object", "group":"break"}.
+    - I want to look at the [toolbox]{"entity":"object", "group":"search"}.
+    - Can I look around the [portal doors]{"entity":"object", "group":"search"}.
+    - Find the [windows]{"entity":"object", "group":"search"}.
+    - Can I find something on the [safe]{"entity":"object", "group":"search"}?
+    - Take the [umbrella]{"entity":"object", "group":"move"} off the [window blinds]{"entity":"object", "group":"search"}!
+    - I open the [photo frame]{"entity":"object", "group":"open"}
+    - I look around the [window shades]{"entity":"object", "group":"search"}
+    - I look at the [keycard]{"entity":"object", "group":"search"}
+    - I inspect the [reflective surface]{"entity":"object", "group":"search"}
+    - I search the [texts]{"entity":"object", "group":"search"}
+    - search the [sleeves]{"entity":"object", "group":"search"}
+    - look at [back doors]{"entity":"object", "group":"search"}
+    - find [tool kit]{"entity":"object", "group":"search"}
+    - open [keycards]{"entity":"object", "group":"open"}
+    - close [floor lamp]{"entity":"object", "group":"close"}
+    - rotate [second hand]{"entity":"object", "group":"rotate"}
+    - move [password]{"entity":"object", "group":"move"}
+    - break [painting frame]{"entity":"object", "group":"break"}
+    - use [sash]{"entity":"object", "group":"use"}
+    - shake [drawers]{"entity":"object", "group":"shake"}
+    - Can you lift the [passkeys]{"entity":"object","group":"move"} to see if there's something underneath?
+    - I'm going to push the [combination]{"entity":"object","group":"use"} to see if it triggers anything.
+    - Let's rotate the [drawer]{"entity":"object","group":"rotate"} to reveal a hidden passage.
+    - Can you insert the [bed]{"entity":"object","group":"insert"} into the [casements]{"entity":"object","group":"open"} to unlock the door?
+    - I'm going to grab the [books]{"entity":"object","group":"search"} to see if there's anything hidden inside.
+    - Let's shake the [boot]{"entity":"object","group":"shake"} to see if we can hear anything rattling inside.
+    - Can we look behind the [workbenches]{"entity":"object","group":"search"} to see if there's a safe?
+    - Can you pull the [telephone]{"entity":"object","group":"use"} to see what happens?
+    - Let's break open the [casements]{"entity":"object","group":"break"} to get the supplies inside.
+    - Can we close the [loose boards]{"entity":"object","group":"close"} to see if it unlocks something?
+    - I'm going to explore the [pane]{"entity":"object","group":"search"} for any hidden clues.
+    - Can you interact with the [sunshade]{"entity":"object","group":"use"} to access the hidden files?
+    - Let's lift the [sleeve]{"entity":"object","group":"move"} to see what's inside the [access code]{"entity":"object","group":"open"}.
+    - Can we push the [button]{"entity":"object","group":"move"} to reveal a hidden room?
+    - Can you turn the [toolbox]{"entity":"object","group":"rotate"} to see if it's unlocked?
+    - Let's nudge the [floor covering]{"entity":"object","group":"move"} to see if there's anything underneath.
+    - Can you manipulate the [panes]{"entity":"object","group":"open"} to see if it can be picked?
+    - Let's prod the [compartment]{"entity":"object","group":"move"} to see if it moves.
+    - Can you hoist the [wooden doors]{"entity":"object","group":"move"} to see what's behind it?
+    - Let's wiggle the [looking glasses]{"entity":"object","group":"move"} to see if it comes off.
+    - Can you operate the [telephone]{"entity":"object","group":"use"} to turn on the lights?
+    - Let's pull the [glass]{"entity":"object","group":"move"} to see what it activates.
+    - Can you lift up the [window shades]{"entity":"object","group":"move"} to see if there's a trapdoor?
+    - Let's fiddle with the [plank]{"entity":"object","group":"rotate"} to see if it unlocks the safe.
+    - Can you pry the [hinged door]{"entity":"object","group":"move"} to see what's behind it?
+    - Let's explore the [back doors]{"entity":"object","group":"search"} for any hidden compartments.
+    - Can you press the [plank]{"entity":"object","group":"use"} to see if it triggers something?
+    - Let's pull the [tool set]{"entity":"object","group":"use"} to see what it activates.
+    - Can you examine the [passcode]{"entity":"object","group":"search"} for any hidden messages?
+    - I examine the [mirror]{"entity":"object","group":"search"}
+    - Let's slide the [floor covering]{"entity":"object","group":"move"} to reveal a hidden room.
+    - Can you twist the [manuscripts]{"entity":"object","group":"rotate"} in the [umbrella]{"entity":"object","group":"open"} to see if it unlocks?
+    - Let's move the [loose boards]{"entity":"object","group":"move"} and [toolbox]{"entity":"object","group":"move"} to see if there's a trapdoor.
+    - Can you use the [front door]{"entity":"object","group":"rotate"} to remove the [sash]{"entity":"object","group":"move"} and look inside?
+    - Let's pull the [windows]{"entity":"object","group":"move"} and [cell]{"entity":"object","group":"use"} to reveal a hidden compartment.
+    - Can you shake the [painting frame]{"entity":"object","group":"shake"} to see if there's anything hidden inside?
+    - Let's push the [phone]{"entity":"object","group":"move"} or move the [texts]{"entity":"object","group":"move"} to see if there's a secret door.
+    - Can you insert the [curtains]{"entity":"object","group":"insert"} into the [passwords]{"entity":"object","group":"use"} to unlock the door?
+    - Let's rotate the [mirrors]{"entity":"object","group":"rotate"} and [sleeves]{"entity":"object","group":"rotate"} to see if it triggers anything.
+    - Can you break the [mats]{"entity":"object","group":"break"} with the [second hand]{"entity":"object","group":"use"} to reveal a hidden item?
+    - Let's lift the [cubbyhole]{"entity":"object","group":"move"} and [bookcases]{"entity":"object","group":"move"} to see if there's a hidden switch.
+    - Can you use the [panel]{"entity":"object","group":"use"} to inspect the [tool chest]{"entity":"object","group":"search"} in the [sash]{"entity":"object","group":"search"}?
+    - Let's pull the [windows]{"entity":"object","group":"move"} and [window coverings]{"entity":"object","group":"move"} to see if there's a hidden trapdoor.
+    - Can you insert the [cabinets]{"entity":"object","group":"insert"} into the [passkey]{"entity":"object","group":"open"} to unlock the [sleeves]{"entity":"object","group":"open"}?
+    - Let's push the [casement]{"entity":"object","group":"move"} and [reflective surface]{"entity":"object","group":"move"} to see if there's a hidden compartment in the [wooden door]{"entity":"object","group":"search"}.
+    - Can you use the [toolbox]{"entity":"object","group":"use"} to examine the [pane]{"entity":"object","group":"search"} for any hidden clues?
+    - Let's rotate the [area rugs]{"entity":"object","group":"rotate"} and [cupboards]{"entity":"object","group":"rotate"} to see if it unlocks the [boot]{"entity":"object","group":"open"}.
+    - Can you shake the [solid doors]{"entity":"object","group":"shake"} to see if it reveals a hidden [codes]{"entity":"object","group":"search"}?
+    - Let's break the [countertop]{"entity":"object","group":"break"} with the [posters]{"entity":"object","group":"use"} to see if there's a [cells]{"entity":"object","group":"search"} hidden inside.
+    - Can you lift the [portal doors]{"entity":"object","group":"move"} and [literature]{"entity":"object","group":"move"} to see if there's a hidden [drawer]{"entity":"object","group":"open"} underneath?
+    - Let's push the [rug]{"entity":"object","group":"move"} and [drawer]{"entity":"object","group":"move"} to see if there's a hidden [looking glasses]{"entity":"object","group":"open"}.
+    - Can you use the [cubbyhole]{"entity":"object","group":"use"} to retrieve the [umbrella]{"entity":"object","group":"search"} from the [safe-deposit box]{"entity":"object","group":"search"}?
+    - We should explore the [sleeve]{"entity":"object","group":"search"} for clues.
+    - The only way to interact with the [shoe]{"entity":"object","group":"use"} is to push the [button]{"entity":"object","group":"use"} on the base.
+    - I'm going to shake the [bookshelves]{"entity":"object","group":"shake"} and see if there's anything inside.
+    - The [rug]{"entity":"object","group":"move"} on the wall seems to be hiding something, let's lift it up and take a look.
+    - We need to interact with the [tray]{"entity":"object","group":"use"} by inserting the [manuscripts]{"entity":"object","group":"insert"} into the port.
+    - Can we pull the [surfaces]{"entity":"object","group":"use"} to see what happens?
+    - I'm going to rotate the [shelf]{"entity":"object","group":"rotate"} and see if it triggers anything.
+    - Let's break the [window coverings]{"entity":"object","group":"break"} and see if there's anything hidden inside.
+    - We could try to insert the [literatures]{"entity":"object","group":"insert"} into the [workbenches]{"entity":"object","group":"use"} and see if anything happens.
+    - Can you grab the [stylus]{"entity":"object","group":"insert"} and unlock the [frame]{"entity":"object","group":"open"}?
+    - Let's push the [button]{"entity":"object","group":"move"} on the [umbrella]{"entity":"object","group":"search"} and see if anything happens.
+    - I'm going to pull the [chairs]{"entity":"object","group":"move"} to see what's behind it.
+    - We need to insert the [keycard]{"entity":"object","group":"insert"} into the [secret code]{"entity":"object","group":"use"} to make it work.
+    - The [pen]{"entity":"object","group":"open"} won't budge, can you shake it a little to loosen it up?
+    - Let's rotate the [artwork]{"entity":"object","group":"rotate"} and see if there's anything hidden inside.
+    - I'm going to lift the [keycard]{"entity":"object","group":"move"} to see if there's a trapdoor underneath.
+    - Can we insert the [sneaker]{"entity":"object","group":"insert"} into the [shelves]{"entity":"object","group":"use"} and see what happens?
+    - We should explore the [shelves]{"entity":"object","group":"search"} for any hidden compartments.
+    - Let's push the [button]{"entity":"object","group":"use"} on the [sleeves]{"entity":"object","group":"search"} and see if it does anything.
+    - I'm going to pull the [sashes]{"entity":"object","group":"move"} on the [cabinets]{"entity":"object","group":"open"} and see if it's locked.
+    - Can we break the [reflective surface]{"entity":"object","group":"break"} on the [combination]{"entity":"object","group":"open"} and see what's inside?
+    - We need to insert the [table lamp]{"entity":"object","group":"insert"} into the [drapes]{"entity":"object","group":"open"} to open the [texts]{"entity":"object","group":"open"}.
+    - Can you shut [marker]{"entity":"object", "group":"close"} to keep the cold out?
+    - Pull [lockbox]{"entity":"object", "group":"close"} to block the light.
+    - I think we should seal [table lamp]{"entity":"object", "group":"close"} before they come.
+    - Twist the [frame]{"entity":"object", "group":"rotate"} to close [door]{"entity":"object", "group":"close"} and secure the money.
+    - Can you snap [photograph]{"entity":"object", "group":"close"} to prevent the box from opening?
+    - We need to bolt [novels]{"entity":"object", "group":"close"} to prevent them from coming up.
+    - Let's slide [table lamp]{"entity":"object", "group":"close"} to hide the documents.
+    - Can you cover [bench]{"entity":"object", "group":"close"} with a [combinations]{"entity":"object", "group":"move"} to hide the sound?
+    - Push [stylus]{"entity":"object", "group":"close"} to keep the smell in.
+    - We should clip [front doors]{"entity":"object", "group":"close"} to keep the backpack from opening.
+    - Shatter the [sashes]{"entity":"object", "group":"break"}.
+    - I want to look at the [mobile device]{"entity":"object", "group":"search"}.
+    - Can I look around the [hands]{"entity":"object", "group":"search"}.
+    - Find the [hinged door]{"entity":"object", "group":"search"}.
+    - Can I find something on the [wooden door]{"entity":"object", "group":"search"}?
+    - Take the [exit door]{"entity":"object", "group":"move"} off the [portal door]{"entity":"object", "group":"search"}!
+    - I open the [texts]{"entity":"object", "group":"open"}
+    - I look around the [floorboard]{"entity":"object", "group":"search"}
+    - I look at the [tables]{"entity":"object", "group":"search"}
+    - I inspect the [sunshade]{"entity":"object", "group":"search"}
+    - I search the [locker]{"entity":"object", "group":"search"}
+    - search the [pen]{"entity":"object", "group":"search"}
+    - look at [rugs]{"entity":"object", "group":"search"}
+    - find [shelf]{"entity":"object", "group":"search"}
+    - open [desk]{"entity":"object", "group":"open"}
+    - close [literatures]{"entity":"object", "group":"close"}
+    - rotate [reflective surface]{"entity":"object", "group":"rotate"}
+    - move [back door]{"entity":"object", "group":"move"}
+    - break [area rugs]{"entity":"object", "group":"break"}
+    - use [drawings]{"entity":"object", "group":"use"}
+    - shake [footwear]{"entity":"object", "group":"shake"}
+    - Can you lift the [light fixtures]{"entity":"object","group":"move"} to see if there's something underneath?
+    - I'm going to push the [tool chest]{"entity":"object","group":"use"} to see if it triggers anything.
+    - Let's rotate the [poster]{"entity":"object","group":"rotate"} to reveal a hidden passage.
+    - Can you insert the [table lamp]{"entity":"object","group":"insert"} into the [table]{"entity":"object","group":"open"} to unlock the door?
+    - I'm going to grab the [sofa]{"entity":"object","group":"search"} to see if there's anything hidden inside.
+    - Let's shake the [countertops]{"entity":"object","group":"shake"} to see if we can hear anything rattling inside.
+    - Can we look behind the [bookcase]{"entity":"object","group":"search"} to see if there's a safe?
+    - Can you pull the [portal door]{"entity":"object","group":"use"} to see what happens?
+    - Let's break open the [board]{"entity":"object","group":"break"} to get the supplies inside.
+    - Can we close the [window coverings]{"entity":"object","group":"close"} to see if it unlocks something?
+    - I'm going to explore the [portraits]{"entity":"object","group":"search"} for any hidden clues.
+    - Can you interact with the [table lamps]{"entity":"object","group":"use"} to access the hidden files?
+    - Let's lift the [bed]{"entity":"object","group":"move"} to see what's inside the [panes]{"entity":"object","group":"open"}.
+    - Can we push the [button]{"entity":"object","group":"move"} to reveal a hidden room?
+    - Can you turn the [phone]{"entity":"object","group":"rotate"} to see if it's unlocked?
+    - Let's nudge the [interior door]{"entity":"object","group":"move"} to see if there's anything underneath.
+    - Can you manipulate the [compartment]{"entity":"object","group":"open"} to see if it can be picked?
+    - Let's prod the [compartment]{"entity":"object","group":"move"} to see if it moves.
+    - Can you hoist the [front door]{"entity":"object","group":"move"} to see what's behind it?
+    - Let's wiggle the [lockbox]{"entity":"object","group":"move"} to see if it comes off.
+    - Can you operate the [tool set]{"entity":"object","group":"use"} to turn on the lights?
+    - Let's pull the [looking glass]{"entity":"object","group":"move"} to see what it activates.
+    - Can you lift up the [second hand]{"entity":"object","group":"move"} to see if there's a trapdoor?
+    - Let's fiddle with the [window]{"entity":"object","group":"rotate"} to see if it unlocks the safe.
+    - Can you pry the [photographs]{"entity":"object","group":"move"} to see what's behind it?
+    - Let's explore the [mats]{"entity":"object","group":"search"} for any hidden compartments.
+    - Can you press the [mobile device]{"entity":"object","group":"use"} to see if it triggers something?
+    - Let's pull the [entryway door]{"entity":"object","group":"use"} to see what it activates.
+    - Can you examine the [window coverings]{"entity":"object","group":"search"} for any hidden messages?
+    - I examine the [photo frame]{"entity":"object","group":"search"}
+    - Let's slide the [code]{"entity":"object","group":"move"} to reveal a hidden room.
+    - Can you twist the [art frame]{"entity":"object","group":"rotate"} in the [area rugs]{"entity":"object","group":"open"} to see if it unlocks?
+    - Let's move the [rain gear]{"entity":"object","group":"move"} and [floor lamp]{"entity":"object","group":"move"} to see if there's a trapdoor.
+    - Can you use the [looking glass]{"entity":"object","group":"rotate"} to remove the [curtains]{"entity":"object","group":"move"} and look inside?
+    - Let's pull the [picture frames]{"entity":"object","group":"move"} and [table lamps]{"entity":"object","group":"use"} to reveal a hidden compartment.
+    - Can you shake the [window shades]{"entity":"object","group":"shake"} to see if there's anything hidden inside?
+    - Let's push the [entryway door]{"entity":"object","group":"move"} or move the [toolbox]{"entity":"object","group":"move"} to see if there's a secret door.
+    - Can you insert the [cabinet]{"entity":"object","group":"insert"} into the [safe]{"entity":"object","group":"use"} to unlock the door?
+    - Let's rotate the [code]{"entity":"object","group":"rotate"} and [cells]{"entity":"object","group":"rotate"} to see if it triggers anything.
+    - Can you break the [hinged door]{"entity":"object","group":"break"} with the [back door]{"entity":"object","group":"use"} to reveal a hidden item?
+    - Let's lift the [shoe]{"entity":"object","group":"move"} and [hinged door]{"entity":"object","group":"move"} to see if there's a hidden switch.
+    - Can you use the [frame]{"entity":"object","group":"use"} to inspect the [portraits]{"entity":"object","group":"search"} in the [vault]{"entity":"object","group":"search"}?
+    - Let's pull the [portrait]{"entity":"object","group":"move"} and [clock hand]{"entity":"object","group":"move"} to see if there's a hidden trapdoor.
+    - Can you insert the [bookcases]{"entity":"object","group":"insert"} into the [board]{"entity":"object","group":"open"} to unlock the [portal doors]{"entity":"object","group":"open"}?
+    - Let's push the [portrait]{"entity":"object","group":"move"} and [painting frame]{"entity":"object","group":"move"} to see if there's a hidden compartment in the [shoe]{"entity":"object","group":"search"}.
+    - Can you use the [looking glass]{"entity":"object","group":"use"} to examine the [toolbox]{"entity":"object","group":"search"} for any hidden clues?
+    - Let's rotate the [floor lamp]{"entity":"object","group":"rotate"} and [texts]{"entity":"object","group":"rotate"} to see if it unlocks the [smartphone]{"entity":"object","group":"open"}.
+    - Can you shake the [locker]{"entity":"object","group":"shake"} to see if it reveals a hidden [board]{"entity":"object","group":"search"}?
+    - Let's break the [drawers]{"entity":"object","group":"break"} with the [bed]{"entity":"object","group":"use"} to see if there's a [seat]{"entity":"object","group":"search"} hidden inside.
+    - Can you lift the [pins]{"entity":"object","group":"move"} and [cells]{"entity":"object","group":"move"} to see if there's a hidden [locker]{"entity":"object","group":"open"} underneath?
+    - Let's push the [tool set]{"entity":"object","group":"move"} and [stool]{"entity":"object","group":"move"} to see if there's a hidden [sunshade]{"entity":"object","group":"open"}.
+    - Can you use the [cabinets]{"entity":"object","group":"use"} to retrieve the [workbench]{"entity":"object","group":"search"} from the [table lamps]{"entity":"object","group":"search"}?
+    - We should explore the [toolbox]{"entity":"object","group":"search"} for clues.
+    - The only way to interact with the [texts]{"entity":"object","group":"use"} is to push the [button]{"entity":"object","group":"use"} on the base.
+    - I'm going to shake the [doors]{"entity":"object","group":"shake"} and see if there's anything inside.
+    - The [sofa]{"entity":"object","group":"move"} on the wall seems to be hiding something, let's lift it up and take a look.
+    - We need to interact with the [bed]{"entity":"object","group":"use"} by inserting the [code]{"entity":"object","group":"insert"} into the port.
+    - Can we pull the [cells]{"entity":"object","group":"use"} to see what happens?
+    - I'm going to rotate the [countertop]{"entity":"object","group":"rotate"} and see if it triggers anything.
+    - Let's break the [pen]{"entity":"object","group":"break"} and see if there's anything hidden inside.
+    - We could try to insert the [board]{"entity":"object","group":"insert"} into the [mirrors]{"entity":"object","group":"use"} and see if anything happens.
+    - Can you grab the [hinged doors]{"entity":"object","group":"insert"} and unlock the [sleeve]{"entity":"object","group":"open"}?
+    - Let's push the [button]{"entity":"object","group":"move"} on the [text]{"entity":"object","group":"search"} and see if anything happens.
+    - I'm going to pull the [locker]{"entity":"object","group":"move"} to see what's behind it.
+    - We need to insert the [code]{"entity":"object","group":"insert"} into the [hands]{"entity":"object","group":"use"} to make it work.
+    - The [poster frame]{"entity":"object","group":"open"} won't budge, can you shake it a little to loosen it up?
+    - Let's rotate the [wooden doors]{"entity":"object","group":"rotate"} and see if there's anything hidden inside.
+    - I'm going to lift the [art frame]{"entity":"object","group":"move"} to see if there's a trapdoor underneath.
+    - Can we insert the [safe]{"entity":"object","group":"insert"} into the [walls]{"entity":"object","group":"use"} and see what happens?
+    - We should explore the [drapes]{"entity":"object","group":"search"} for any hidden compartments.
+    - Let's push the [button]{"entity":"object","group":"use"} on the [reflective surface]{"entity":"object","group":"search"} and see if it does anything.
+    - I'm going to pull the [rug]{"entity":"object","group":"move"} on the [desks]{"entity":"object","group":"open"} and see if it's locked.
+    - Can we break the [manuscript]{"entity":"object","group":"break"} on the [glasses]{"entity":"object","group":"open"} and see what's inside?
+    - We need to insert the [desks]{"entity":"object","group":"insert"} into the [window coverings]{"entity":"object","group":"open"} to open the [code]{"entity":"object","group":"open"}.
+    - Can you shut [parasol]{"entity":"object", "group":"close"} to keep the cold out?
+    - Pull [table lamps]{"entity":"object", "group":"close"} to block the light.
+    - I think we should seal [door]{"entity":"object", "group":"close"} before they come.
+    - Twist the [slipper]{"entity":"object", "group":"rotate"} to close [pantry]{"entity":"object", "group":"close"} and secure the money.
+    - Can you snap [portal door]{"entity":"object", "group":"close"} to prevent the box from opening?
+    - We need to bolt [exit door]{"entity":"object", "group":"close"} to prevent them from coming up.
+    - Let's slide [floor lamp]{"entity":"object", "group":"close"} to hide the documents.
+    - Can you cover [umbrella]{"entity":"object", "group":"close"} with a [passcode]{"entity":"object", "group":"move"} to hide the sound?
+    - Push [front doors]{"entity":"object", "group":"close"} to keep the smell in.
+    - We should clip [front doors]{"entity":"object", "group":"close"} to keep the backpack from opening.
+    - Shatter the [artworks]{"entity":"object", "group":"break"}.
+    - I want to look at the [bed]{"entity":"object", "group":"search"}.
+    - Can I look around the [back doors]{"entity":"object", "group":"search"}.
+    - Find the [toolbox]{"entity":"object", "group":"search"}.
+    - Can I find something on the [text]{"entity":"object", "group":"search"}?
+    - Take the [keycard]{"entity":"object", "group":"move"} off the [floorboard]{"entity":"object", "group":"search"}!
+    - I open the [tables]{"entity":"object", "group":"open"}
+    - I look around the [portal doors]{"entity":"object", "group":"search"}
+    - I look at the [panel]{"entity":"object", "group":"search"}
+    - I inspect the [toolbox]{"entity":"object", "group":"search"}
+    - I search the [chairs]{"entity":"object", "group":"search"}
+    - search the [window drapes]{"entity":"object", "group":"search"}
+    - look at [reflective surface]{"entity":"object", "group":"search"}
+    - find [pins]{"entity":"object", "group":"search"}
+    - open [shoe]{"entity":"object", "group":"open"}
+    - close [countertop]{"entity":"object", "group":"close"}
+    - rotate [shelves]{"entity":"object", "group":"rotate"}
+    - move [wooden doors]{"entity":"object", "group":"move"}
+    - break [panel door]{"entity":"object", "group":"break"}
+    - use [lamps]{"entity":"object", "group":"use"}
+    - shake [sofa]{"entity":"object", "group":"shake"}
+    - Can you lift the [boot]{"entity":"object","group":"move"} to see if there's something underneath?
+    - I'm going to push the [sofa]{"entity":"object","group":"use"} to see if it triggers anything.
+    - Let's rotate the [window coverings]{"entity":"object","group":"rotate"} to reveal a hidden passage.
+    - Can you insert the [shelves]{"entity":"object","group":"insert"} into the [sofa]{"entity":"object","group":"open"} to unlock the door?
+    - I'm going to grab the [cupboards]{"entity":"object","group":"search"} to see if there's anything hidden inside.
+    - Let's shake the [photo frame]{"entity":"object","group":"shake"} to see if we can hear anything rattling inside.
+    - Can we look behind the [tool chest]{"entity":"object","group":"search"} to see if there's a safe?
+    - Can you pull the [light fixture]{"entity":"object","group":"use"} to see what happens?
+    - Let's break open the [rugs]{"entity":"object","group":"break"} to get the supplies inside.
+    - Can we close the [clock hand]{"entity":"object","group":"close"} to see if it unlocks something?
+    - I'm going to explore the [poster frame]{"entity":"object","group":"search"} for any hidden clues.
+    - Can you interact with the [wardrobe]{"entity":"object","group":"use"} to access the hidden files?
+    - Let's lift the [sofas]{"entity":"object","group":"move"} to see what's inside the [light fixture]{"entity":"object","group":"open"}.
+    - Can we push the [button]{"entity":"object","group":"move"} to reveal a hidden room?
+    - Can you turn the [lights]{"entity":"object","group":"rotate"} to see if it's unlocked?
+    - Let's nudge the [casement]{"entity":"object","group":"move"} to see if there's anything underneath.
+    - Can you manipulate the [drawers]{"entity":"object","group":"open"} to see if it can be picked?
+    - Let's prod the [surfaces]{"entity":"object","group":"move"} to see if it moves.
+    - Can you hoist the [compartment]{"entity":"object","group":"move"} to see what's behind it?
+    - Let's wiggle the [pictures]{"entity":"object","group":"move"} to see if it comes off.
+    - Can you operate the [mat]{"entity":"object","group":"use"} to turn on the lights?
+    - Let's pull the [posters]{"entity":"object","group":"move"} to see what it activates.
+    - Can you lift up the [mat]{"entity":"object","group":"move"} to see if there's a trapdoor?
+    - Let's fiddle with the [desks]{"entity":"object","group":"rotate"} to see if it unlocks the safe.
+    - Can you pry the [table lamps]{"entity":"object","group":"move"} to see what's behind it?
+    - Let's explore the [countertops]{"entity":"object","group":"search"} for any hidden compartments.
+    - Can you press the [writing instrument]{"entity":"object","group":"use"} to see if it triggers something?
+    - Let's pull the [seat]{"entity":"object","group":"use"} to see what it activates.
+    - Can you examine the [cupboard]{"entity":"object","group":"search"} for any hidden messages?
+    - I examine the [slat]{"entity":"object","group":"search"}
+    - Let's slide the [window coverings]{"entity":"object","group":"move"} to reveal a hidden room.
+    - Can you twist the [light fixtures]{"entity":"object","group":"rotate"} in the [clock hands]{"entity":"object","group":"open"} to see if it unlocks?
+    - Let's move the [interior doors]{"entity":"object","group":"move"} and [combination]{"entity":"object","group":"move"} to see if there's a trapdoor.
+    - Can you use the [exit doors]{"entity":"object","group":"rotate"} to remove the [light fixtures]{"entity":"object","group":"move"} and look inside?
+    - Let's pull the [tray]{"entity":"object","group":"move"} and [footwear]{"entity":"object","group":"use"} to reveal a hidden compartment.
+    - Can you shake the [parasol]{"entity":"object","group":"shake"} to see if there's anything hidden inside?
+    - Let's push the [curtains]{"entity":"object","group":"move"} or move the [drawing]{"entity":"object","group":"move"} to see if there's a secret door.
+    - Can you insert the [picture frame]{"entity":"object","group":"insert"} into the [toolbox]{"entity":"object","group":"use"} to unlock the door?
+    - Let's rotate the [frame]{"entity":"object","group":"rotate"} and [books]{"entity":"object","group":"rotate"} to see if it triggers anything.
+    - Can you break the [stools]{"entity":"object","group":"break"} with the [passcode]{"entity":"object","group":"use"} to reveal a hidden item?
+    - Let's lift the [tool case]{"entity":"object","group":"move"} and [looking glass]{"entity":"object","group":"move"} to see if there's a hidden switch.
+    - Can you use the [entryway doors]{"entity":"object","group":"use"} to inspect the [pins]{"entity":"object","group":"search"} in the [rugs]{"entity":"object","group":"search"}?
+    - Let's pull the [carpets]{"entity":"object","group":"move"} and [cabinet]{"entity":"object","group":"move"} to see if there's a hidden trapdoor.
+    - Can you insert the [sleeve]{"entity":"object","group":"insert"} into the [stool]{"entity":"object","group":"open"} to unlock the [secret codes]{"entity":"object","group":"open"}?
+    - Let's push the [clock hand]{"entity":"object","group":"move"} and [panel door]{"entity":"object","group":"move"} to see if there's a hidden compartment in the [area rugs]{"entity":"object","group":"search"}.
+    - Can you use the [table lamps]{"entity":"object","group":"use"} to examine the [looking glasses]{"entity":"object","group":"search"} for any hidden clues?
+    - Let's rotate the [front door]{"entity":"object","group":"rotate"} and [window drapes]{"entity":"object","group":"rotate"} to see if it unlocks the [shelf]{"entity":"object","group":"open"}.
+    - Can you shake the [reflective surfaces]{"entity":"object","group":"shake"} to see if it reveals a hidden [drawers]{"entity":"object","group":"search"}?
+    - Let's break the [drawers]{"entity":"object","group":"break"} with the [drapes]{"entity":"object","group":"use"} to see if there's a [code]{"entity":"object","group":"search"} hidden inside.
+    - Can you lift the [phone]{"entity":"object","group":"move"} and [window shades]{"entity":"object","group":"move"} to see if there's a hidden [workbenches]{"entity":"object","group":"open"} underneath?
+    - Let's push the [posters]{"entity":"object","group":"move"} and [bookshelves]{"entity":"object","group":"move"} to see if there's a hidden [tables]{"entity":"object","group":"open"}.
+    - Can you use the [manuscript]{"entity":"object","group":"use"} to retrieve the [panel door]{"entity":"object","group":"search"} from the [clock hands]{"entity":"object","group":"search"}?
+    - We should explore the [phone]{"entity":"object","group":"search"} for clues.
+    - The only way to interact with the [safe-deposit box]{"entity":"object","group":"use"} is to push the [button]{"entity":"object","group":"use"} on the base.
+    - I'm going to shake the [pin]{"entity":"object","group":"shake"} and see if there's anything inside.
+    - The [wall]{"entity":"object","group":"move"} on the wall seems to be hiding something, let's lift it up and take a look.
+    - We need to interact with the [solid doors]{"entity":"object","group":"use"} by inserting the [sunshade]{"entity":"object","group":"insert"} into the port.
+    - Can we pull the [cabinets]{"entity":"object","group":"use"} to see what happens?
+    - I'm going to rotate the [area rug]{"entity":"object","group":"rotate"} and see if it triggers anything.
+    - Let's break the [painting frame]{"entity":"object","group":"break"} and see if there's anything hidden inside.
+    - We could try to insert the [drapes]{"entity":"object","group":"insert"} into the [desks]{"entity":"object","group":"use"} and see if anything happens.
+    - Can you grab the [painting frame]{"entity":"object","group":"insert"} and unlock the [bookcase]{"entity":"object","group":"open"}?
+    - Let's push the [button]{"entity":"object","group":"move"} on the [rugs]{"entity":"object","group":"search"} and see if anything happens.
+    - I'm going to pull the [shelves]{"entity":"object","group":"move"} to see what's behind it.
+    - We need to insert the [pen]{"entity":"object","group":"insert"} into the [passkeys]{"entity":"object","group":"use"} to make it work.
+    - The [curtains]{"entity":"object","group":"open"} won't budge, can you shake it a little to loosen it up?
+    - Let's rotate the [keys]{"entity":"object","group":"rotate"} and see if there's anything hidden inside.
+    - I'm going to lift the [wardrobes]{"entity":"object","group":"move"} to see if there's a trapdoor underneath.
+    - Can we insert the [wooden doors]{"entity":"object","group":"insert"} into the [compartments]{"entity":"object","group":"use"} and see what happens?
+    - We should explore the [locker]{"entity":"object","group":"search"} for any hidden compartments.
+    - Let's push the [button]{"entity":"object","group":"use"} on the [skeleton keys]{"entity":"object","group":"search"} and see if it does anything.
+    - I'm going to pull the [window blinds]{"entity":"object","group":"move"} on the [carpet]{"entity":"object","group":"open"} and see if it's locked.
+    - Can we break the [writing instrument]{"entity":"object","group":"break"} on the [area rug]{"entity":"object","group":"open"} and see what's inside?
+    - We need to insert the [locker]{"entity":"object","group":"insert"} into the [lockbox]{"entity":"object","group":"open"} to open the [hands]{"entity":"object","group":"open"}.
+    - Can you shut [literature]{"entity":"object", "group":"close"} to keep the cold out?
+    - Pull [floor coverings]{"entity":"object", "group":"close"} to block the light.
+    - I think we should seal [clock hand]{"entity":"object", "group":"close"} before they come.
+    - Twist the [clock hand]{"entity":"object", "group":"rotate"} to close [bookshelves]{"entity":"object", "group":"close"} and secure the money.
+    - Can you snap [slat]{"entity":"object", "group":"close"} to prevent the box from opening?
+    - We need to bolt [cupboards]{"entity":"object", "group":"close"} to prevent them from coming up.
+    - Let's slide [sashes]{"entity":"object", "group":"close"} to hide the documents.
+    - Can you cover [artworks]{"entity":"object", "group":"close"} with a [interior doors]{"entity":"object", "group":"move"} to hide the sound?
+    - Push [mirror]{"entity":"object", "group":"close"} to keep the smell in.
+    - We should clip [manuscript]{"entity":"object", "group":"close"} to keep the backpack from opening.
+    - Shatter the [secret codes]{"entity":"object", "group":"break"}.
+    - I want to look at the [board]{"entity":"object", "group":"search"}.
+    - Can I look around the [painting frame]{"entity":"object", "group":"search"}.
+    - Find the [passwords]{"entity":"object", "group":"search"}.
+    - Can I find something on the [window curtains]{"entity":"object", "group":"search"}?
+    - Take the [portal doors]{"entity":"object", "group":"move"} off the [literature]{"entity":"object", "group":"search"}!
+    - I open the [photograph]{"entity":"object", "group":"open"}
+    - I look around the [painting frame]{"entity":"object", "group":"search"}
+    - I look at the [keycards]{"entity":"object", "group":"search"}
+    - I inspect the [pictures]{"entity":"object", "group":"search"}
+    - I search the [literatures]{"entity":"object", "group":"search"}
+    - search the [windows]{"entity":"object", "group":"search"}
+    - look at [pictures]{"entity":"object", "group":"search"}
+    - find [poster]{"entity":"object", "group":"search"}
+    - open [slat]{"entity":"object", "group":"open"}
+    - close [text]{"entity":"object", "group":"close"}
+    - rotate [code]{"entity":"object", "group":"rotate"}
+    - move [casements]{"entity":"object", "group":"move"}
+    - break [lamp]{"entity":"object", "group":"break"}
+    - use [reflective surface]{"entity":"object", "group":"use"}
+    - shake [window]{"entity":"object", "group":"shake"}
+    - Can you lift the [manuscripts]{"entity":"object","group":"move"} to see if there's something underneath?
+    - I'm going to push the [entryway door]{"entity":"object","group":"use"} to see if it triggers anything.
+    - Let's rotate the [secret code]{"entity":"object","group":"rotate"} to reveal a hidden passage.
+    - Can you insert the [passcode]{"entity":"object","group":"insert"} into the [art frame]{"entity":"object","group":"open"} to unlock the door?
+    - I'm going to grab the [surface]{"entity":"object","group":"search"} to see if there's anything hidden inside.
+    - Let's shake the [window blinds]{"entity":"object","group":"shake"} to see if we can hear anything rattling inside.
+    - Can we look behind the [window drapes]{"entity":"object","group":"search"} to see if there's a safe?
+    - Can you pull the [passcode]{"entity":"object","group":"use"} to see what happens?
+    - Let's break open the [texts]{"entity":"object","group":"break"} to get the supplies inside.
+    - Can we close the [reflective surfaces]{"entity":"object","group":"close"} to see if it unlocks something?
+    - I'm going to explore the [hinged door]{"entity":"object","group":"search"} for any hidden clues.
+    - Can you interact with the [lamps]{"entity":"object","group":"use"} to access the hidden files?
+    - Let's lift the [tool kit]{"entity":"object","group":"move"} to see what's inside the [window shades]{"entity":"object","group":"open"}.
+    - Can we push the [button]{"entity":"object","group":"move"} to reveal a hidden room?
+    - Can you turn the [casement]{"entity":"object","group":"rotate"} to see if it's unlocked?
+    - Let's nudge the [seats]{"entity":"object","group":"move"} to see if there's anything underneath.
+    - Can you manipulate the [carpets]{"entity":"object","group":"open"} to see if it can be picked?
+    - Let's prod the [wooden doors]{"entity":"object","group":"move"} to see if it moves.
+    - Can you hoist the [bench]{"entity":"object","group":"move"} to see what's behind it?
+    - Let's wiggle the [workbenches]{"entity":"object","group":"move"} to see if it comes off.
+    - Can you operate the [bookshelf]{"entity":"object","group":"use"} to turn on the lights?
+    - Let's pull the [reflective surface]{"entity":"object","group":"move"} to see what it activates.
+    - Can you lift up the [artwork]{"entity":"object","group":"move"} to see if there's a trapdoor?
+    - Let's fiddle with the [floor coverings]{"entity":"object","group":"rotate"} to see if it unlocks the safe.
+    - Can you pry the [clock hands]{"entity":"object","group":"move"} to see what's behind it?
+    - Let's explore the [lockbox]{"entity":"object","group":"search"} for any hidden compartments.
+    - Can you press the [panel doors]{"entity":"object","group":"use"} to see if it triggers something?
+    - Let's pull the [skeleton key]{"entity":"object","group":"use"} to see what it activates.
+    - Can you examine the [mobile device]{"entity":"object","group":"search"} for any hidden messages?
+    - I examine the [front doors]{"entity":"object","group":"search"}
+    - Let's slide the [minute hand]{"entity":"object","group":"move"} to reveal a hidden room.
+    - Can you twist the [shelf]{"entity":"object","group":"rotate"} in the [portal door]{"entity":"object","group":"open"} to see if it unlocks?
+    - Let's move the [artworks]{"entity":"object","group":"move"} and [pencil]{"entity":"object","group":"move"} to see if there's a trapdoor.
+    - Can you use the [sneaker]{"entity":"object","group":"rotate"} to remove the [seat]{"entity":"object","group":"move"} and look inside?
+    - Let's pull the [cell phone]{"entity":"object","group":"move"} and [text]{"entity":"object","group":"use"} to reveal a hidden compartment.
+    - Can you shake the [prison]{"entity":"object","group":"shake"} to see if there's anything hidden inside?
+    - Let's push the [strongbox]{"entity":"object","group":"move"} or move the [mirror]{"entity":"object","group":"move"} to see if there's a secret door.
+    - Can you insert the [passwords]{"entity":"object","group":"insert"} into the [countertops]{"entity":"object","group":"use"} to unlock the door?
+    - Let's rotate the [surface]{"entity":"object","group":"rotate"} and [pins]{"entity":"object","group":"rotate"} to see if it triggers anything.
+    - Can you break the [literatures]{"entity":"object","group":"break"} with the [chairs]{"entity":"object","group":"use"} to reveal a hidden item?
+    - Let's lift the [blinds]{"entity":"object","group":"move"} and [footwear]{"entity":"object","group":"move"} to see if there's a hidden switch.
+    - Can you use the [shoe]{"entity":"object","group":"use"} to inspect the [cabinet]{"entity":"object","group":"search"} in the [back door]{"entity":"object","group":"search"}?
+    - Let's pull the [passkey]{"entity":"object","group":"move"} and [window blinds]{"entity":"object","group":"move"} to see if there's a hidden trapdoor.
+    - Can you insert the [plank]{"entity":"object","group":"insert"} into the [stool]{"entity":"object","group":"open"} to unlock the [panel door]{"entity":"object","group":"open"}?
+    - Let's push the [window coverings]{"entity":"object","group":"move"} and [bookcase]{"entity":"object","group":"move"} to see if there's a hidden compartment in the [frame]{"entity":"object","group":"search"}.
+    - Can you use the [pins]{"entity":"object","group":"use"} to examine the [back door]{"entity":"object","group":"search"} for any hidden clues?
+    - Let's rotate the [artwork]{"entity":"object","group":"rotate"} and [literatures]{"entity":"object","group":"rotate"} to see if it unlocks the [slipper]{"entity":"object","group":"open"}.
+    - Can you shake the [back door]{"entity":"object","group":"shake"} to see if it reveals a hidden [passkey]{"entity":"object","group":"search"}?
+    - Let's break the [casements]{"entity":"object","group":"break"} with the [glasses]{"entity":"object","group":"use"} to see if there's a [front doors]{"entity":"object","group":"search"} hidden inside.
+    - Can you lift the [novels]{"entity":"object","group":"move"} and [drawer]{"entity":"object","group":"move"} to see if there's a hidden [strongbox]{"entity":"object","group":"open"} underneath?
+    - Let's push the [secret codes]{"entity":"object","group":"move"} and [stylus]{"entity":"object","group":"move"} to see if there's a hidden [cell phone]{"entity":"object","group":"open"}.
+    - Can you use the [board]{"entity":"object","group":"use"} to retrieve the [tool kit]{"entity":"object","group":"search"} from the [bed]{"entity":"object","group":"search"}?
+    - We should explore the [cubbyholes]{"entity":"object","group":"search"} for clues.
+    - The only way to interact with the [floor covering]{"entity":"object","group":"use"} is to push the [button]{"entity":"object","group":"use"} on the base.
+    - I'm going to shake the [safe]{"entity":"object","group":"shake"} and see if there's anything inside.
+    - The [bookshelf]{"entity":"object","group":"move"} on the wall seems to be hiding something, let's lift it up and take a look.
+    - We need to interact with the [passcode]{"entity":"object","group":"use"} by inserting the [shoe]{"entity":"object","group":"insert"} into the port.
+    - Can we pull the [photograph]{"entity":"object","group":"use"} to see what happens?
+    - I'm going to rotate the [cupboards]{"entity":"object","group":"rotate"} and see if it triggers anything.
+    - Let's break the [poster]{"entity":"object","group":"break"} and see if there's anything hidden inside.
+    - We could try to insert the [window coverings]{"entity":"object","group":"insert"} into the [beds]{"entity":"object","group":"use"} and see if anything happens.
+    - Can you grab the [rug]{"entity":"object","group":"insert"} and unlock the [artworks]{"entity":"object","group":"open"}?
+    - Let's push the [button]{"entity":"object","group":"move"} on the [shoe]{"entity":"object","group":"search"} and see if anything happens.
+    - I'm going to pull the [pins]{"entity":"object","group":"move"} to see what's behind it.
+    - We need to insert the [tray]{"entity":"object","group":"insert"} into the [wardrobes]{"entity":"object","group":"use"} to make it work.
+    - The [footwear]{"entity":"object","group":"open"} won't budge, can you shake it a little to loosen it up?
+    - Let's rotate the [cubbyholes]{"entity":"object","group":"rotate"} and see if there's anything hidden inside.
+    - I'm going to lift the [panel]{"entity":"object","group":"move"} to see if there's a trapdoor underneath.
+    - Can we insert the [floor covering]{"entity":"object","group":"insert"} into the [back doors]{"entity":"object","group":"use"} and see what happens?
+    - We should explore the [pencil]{"entity":"object","group":"search"} for any hidden compartments.
+    - Let's push the [button]{"entity":"object","group":"use"} on the [chairs]{"entity":"object","group":"search"} and see if it does anything.
+    - I'm going to pull the [painting]{"entity":"object","group":"move"} on the [photo frame]{"entity":"object","group":"open"} and see if it's locked.
+    - Can we break the [bookshelf]{"entity":"object","group":"break"} on the [surfaces]{"entity":"object","group":"open"} and see what's inside?
+    - We need to insert the [exit door]{"entity":"object","group":"insert"} into the [blinds]{"entity":"object","group":"open"} to open the [drawers]{"entity":"object","group":"open"}.
+    - Can you shut [wardrobes]{"entity":"object", "group":"close"} to keep the cold out?
+    - Pull [window coverings]{"entity":"object", "group":"close"} to block the light.
+    - I think we should seal [seat]{"entity":"object", "group":"close"} before they come.
+    - Twist the [area rug]{"entity":"object", "group":"rotate"} to close [seat]{"entity":"object", "group":"close"} and secure the money.
+    - Can you snap [literatures]{"entity":"object", "group":"close"} to prevent the box from opening?
+    - We need to bolt [photo frame]{"entity":"object", "group":"close"} to prevent them from coming up.
+    - Let's slide [wall]{"entity":"object", "group":"close"} to hide the documents.
+    - Can you cover [safe-deposit box]{"entity":"object", "group":"close"} with a [plank]{"entity":"object", "group":"move"} to hide the sound?
+    - Push [window shades]{"entity":"object", "group":"close"} to keep the smell in.
+    - We should clip [wooden doors]{"entity":"object", "group":"close"} to keep the backpack from opening.
+    - Shatter the [picture frame]{"entity":"object", "group":"break"}.
+    - I want to look at the [artwork]{"entity":"object", "group":"search"}.
+    - Can I look around the [manuscripts]{"entity":"object", "group":"search"}.
+    - Find the [skeleton key]{"entity":"object", "group":"search"}.
+    - Can I find something on the [novel]{"entity":"object", "group":"search"}?
+    - Take the [sunshade]{"entity":"object", "group":"move"} off the [countertops]{"entity":"object", "group":"search"}!
+    - I open the [hands]{"entity":"object", "group":"open"}
+    - I look around the [hinged doors]{"entity":"object", "group":"search"}
+    - I look at the [compartments]{"entity":"object", "group":"search"}
+    - I inspect the [reflective surfaces]{"entity":"object", "group":"search"}
+    - I search the [pen]{"entity":"object", "group":"search"}
+    - search the [poster frame]{"entity":"object", "group":"search"}
+    - look at [sunshade]{"entity":"object", "group":"search"}
+    - find [parasol]{"entity":"object", "group":"search"}
+    - open [window drapes]{"entity":"object", "group":"open"}
+    - close [telephone]{"entity":"object", "group":"close"}
+    - rotate [doors]{"entity":"object", "group":"rotate"}
+    - move [tool chest]{"entity":"object", "group":"move"}
+    - break [pictures]{"entity":"object", "group":"break"}
+    - use [door]{"entity":"object", "group":"use"}
+    - shake [countertops]{"entity":"object", "group":"shake"}
+    - Can you lift the [text]{"entity":"object","group":"move"} to see if there's something underneath?
+    - I'm going to push the [footwear]{"entity":"object","group":"use"} to see if it triggers anything.
+    - Let's rotate the [compartments]{"entity":"object","group":"rotate"} to reveal a hidden passage.
+    - Can you insert the [frame]{"entity":"object","group":"insert"} into the [passcode]{"entity":"object","group":"open"} to unlock the door?
+    - I'm going to grab the [bookshelves]{"entity":"object","group":"search"} to see if there's anything hidden inside.
+    - Let's shake the [area rug]{"entity":"object","group":"shake"} to see if we can hear anything rattling inside.
+    - Can we look behind the [workbenches]{"entity":"object","group":"search"} to see if there's a safe?
+    - Can you pull the [minute hand]{"entity":"object","group":"use"} to see what happens?
+    - Let's break open the [sofas]{"entity":"object","group":"break"} to get the supplies inside.
+    - Can we close the [back doors]{"entity":"object","group":"close"} to see if it unlocks something?
+    - I'm going to explore the [window blinds]{"entity":"object","group":"search"} for any hidden clues.
+    - Can you interact with the [doors]{"entity":"object","group":"use"} to access the hidden files?
+    - Let's lift the [phone]{"entity":"object","group":"move"} to see what's inside the [beds]{"entity":"object","group":"open"}.
+    - Can we push the [button]{"entity":"object","group":"move"} to reveal a hidden room?
+    - Can you turn the [photo frame]{"entity":"object","group":"rotate"} to see if it's unlocked?
+    - Let's nudge the [hinged door]{"entity":"object","group":"move"} to see if there's anything underneath.
+    - Can you manipulate the [floor lamp]{"entity":"object","group":"open"} to see if it can be picked?
+    - Let's prod the [exit door]{"entity":"object","group":"move"} to see if it moves.
+    - Can you hoist the [literatures]{"entity":"object","group":"move"} to see what's behind it?
+    - Let's wiggle the [manuscript]{"entity":"object","group":"move"} to see if it comes off.
+    - Can you operate the [sneaker]{"entity":"object","group":"use"} to turn on the lights?
+    - Let's pull the [light fixtures]{"entity":"object","group":"move"} to see what it activates.
+    - Can you lift up the [loose board]{"entity":"object","group":"move"} to see if there's a trapdoor?
+    - Let's fiddle with the [mat]{"entity":"object","group":"rotate"} to see if it unlocks the safe.
+    - Can you pry the [smartphone]{"entity":"object","group":"move"} to see what's behind it?
+    - Let's explore the [book]{"entity":"object","group":"search"} for any hidden compartments.
+    - Can you press the [wooden doors]{"entity":"object","group":"use"} to see if it triggers something?
+    - Let's pull the [trays]{"entity":"object","group":"use"} to see what it activates.
+    - Can you examine the [picture frame]{"entity":"object","group":"search"} for any hidden messages?
+    - I examine the [reflective surfaces]{"entity":"object","group":"search"}
+    - Let's slide the [key]{"entity":"object","group":"move"} to reveal a hidden room.
+    - Can you twist the [pencil]{"entity":"object","group":"rotate"} in the [artwork]{"entity":"object","group":"open"} to see if it unlocks?
+    - Let's move the [chair]{"entity":"object","group":"move"} and [bookshelves]{"entity":"object","group":"move"} to see if there's a trapdoor.
+    - Can you use the [book]{"entity":"object","group":"rotate"} to remove the [tool set]{"entity":"object","group":"move"} and look inside?
+    - Let's pull the [table lamps]{"entity":"object","group":"move"} and [picture frame]{"entity":"object","group":"use"} to reveal a hidden compartment.
+    - Can you shake the [safe]{"entity":"object","group":"shake"} to see if there's anything hidden inside?
+    - Let's push the [access code]{"entity":"object","group":"move"} or move the [interior doors]{"entity":"object","group":"move"} to see if there's a secret door.
+    - Can you insert the [entryway doors]{"entity":"object","group":"insert"} into the [portrait]{"entity":"object","group":"use"} to unlock the door?
+    - Let's rotate the [reflective surfaces]{"entity":"object","group":"rotate"} and [reflective surface]{"entity":"object","group":"rotate"} to see if it triggers anything.
+    - Can you break the [wooden door]{"entity":"object","group":"break"} with the [poster frame]{"entity":"object","group":"use"} to reveal a hidden item?
+    - Let's lift the [pen]{"entity":"object","group":"move"} and [key]{"entity":"object","group":"move"} to see if there's a hidden switch.
+    - Can you use the [wardrobes]{"entity":"object","group":"use"} to inspect the [rug]{"entity":"object","group":"search"} in the [text]{"entity":"object","group":"search"}?
+    - Let's pull the [footwear]{"entity":"object","group":"move"} and [floor lamp]{"entity":"object","group":"move"} to see if there's a hidden trapdoor.
+    - Can you insert the [safe-deposit box]{"entity":"object","group":"insert"} into the [bed]{"entity":"object","group":"open"} to unlock the [marker]{"entity":"object","group":"open"}?
+    - Let's push the [pin]{"entity":"object","group":"move"} and [key]{"entity":"object","group":"move"} to see if there's a hidden compartment in the [keycard]{"entity":"object","group":"search"}.
+    - Can you use the [workbench]{"entity":"object","group":"use"} to examine the [trays]{"entity":"object","group":"search"} for any hidden clues?
+    - Let's rotate the [toolbox]{"entity":"object","group":"rotate"} and [cells]{"entity":"object","group":"rotate"} to see if it unlocks the [posters]{"entity":"object","group":"open"}.
+    - Can you shake the [countertop]{"entity":"object","group":"shake"} to see if it reveals a hidden [windows]{"entity":"object","group":"search"}?
+    - Let's break the [poster]{"entity":"object","group":"break"} with the [tool case]{"entity":"object","group":"use"} to see if there's a [phone]{"entity":"object","group":"search"} hidden inside.
+    - Can you lift the [rain gear]{"entity":"object","group":"move"} and [texts]{"entity":"object","group":"move"} to see if there's a hidden [cells]{"entity":"object","group":"open"} underneath?
+    - Let's push the [pins]{"entity":"object","group":"move"} and [solid door]{"entity":"object","group":"move"} to see if there's a hidden [writing instrument]{"entity":"object","group":"open"}.
+    - Can you use the [rain gear]{"entity":"object","group":"use"} to retrieve the [cabinet]{"entity":"object","group":"search"} from the [interior doors]{"entity":"object","group":"search"}?
+    - We should explore the [panel doors]{"entity":"object","group":"search"} for clues.
+    - The only way to interact with the [pictures]{"entity":"object","group":"use"} is to push the [button]{"entity":"object","group":"use"} on the base.
+    - I'm going to shake the [writing instrument]{"entity":"object","group":"shake"} and see if there's anything inside.
+    - The [doors]{"entity":"object","group":"move"} on the wall seems to be hiding something, let's lift it up and take a look.
+    - We need to interact with the [cell phone]{"entity":"object","group":"use"} by inserting the [secret code]{"entity":"object","group":"insert"} into the port.
+    - Can we pull the [tool case]{"entity":"object","group":"use"} to see what happens?
+    - I'm going to rotate the [looking glasses]{"entity":"object","group":"rotate"} and see if it triggers anything.
+    - Let's break the [cell phone]{"entity":"object","group":"break"} and see if there's anything hidden inside.
+    - We could try to insert the [drawer]{"entity":"object","group":"insert"} into the [cabinet]{"entity":"object","group":"use"} and see if anything happens.
+    - Can you grab the [pencil]{"entity":"object","group":"insert"} and unlock the [manuscript]{"entity":"object","group":"open"}?
+    - Let's push the [button]{"entity":"object","group":"move"} on the [table]{"entity":"object","group":"search"} and see if anything happens.
+    - I'm going to pull the [mat]{"entity":"object","group":"move"} to see what's behind it.
+    - We need to insert the [code]{"entity":"object","group":"insert"} into the [trays]{"entity":"object","group":"use"} to make it work.
+    - The [prison]{"entity":"object","group":"open"} won't budge, can you shake it a little to loosen it up?
+    - Let's rotate the [benches]{"entity":"object","group":"rotate"} and see if there's anything hidden inside.
+    - I'm going to lift the [shoe]{"entity":"object","group":"move"} to see if there's a trapdoor underneath.
+    - Can we insert the [floorboard]{"entity":"object","group":"insert"} into the [panel doors]{"entity":"object","group":"use"} and see what happens?
+    - We should explore the [tool kit]{"entity":"object","group":"search"} for any hidden compartments.
+    - Let's push the [button]{"entity":"object","group":"use"} on the [keycards]{"entity":"object","group":"search"} and see if it does anything.
+    - I'm going to pull the [seats]{"entity":"object","group":"move"} on the [entryway doors]{"entity":"object","group":"open"} and see if it's locked.
+    - Can we break the [code]{"entity":"object","group":"break"} on the [pantries]{"entity":"object","group":"open"} and see what's inside?
+    - We need to insert the [front doors]{"entity":"object","group":"insert"} into the [light]{"entity":"object","group":"open"} to open the [window coverings]{"entity":"object","group":"open"}.
+    - Can you shut [posters]{"entity":"object", "group":"close"} to keep the cold out?
+    - Pull [cabinets]{"entity":"object", "group":"close"} to block the light.
+    - I think we should seal [secret codes]{"entity":"object", "group":"close"} before they come.
+    - Twist the [window coverings]{"entity":"object", "group":"rotate"} to close [lights]{"entity":"object", "group":"close"} and secure the money.
+    - Can you snap [access code]{"entity":"object", "group":"close"} to prevent the box from opening?
+    - We need to bolt [text]{"entity":"object", "group":"close"} to prevent them from coming up.
+    - Let's slide [drawings]{"entity":"object", "group":"close"} to hide the documents.
+    - Can you cover [cell phone]{"entity":"object", "group":"close"} with a [board]{"entity":"object", "group":"move"} to hide the sound?
+    - Push [bookshelves]{"entity":"object", "group":"close"} to keep the smell in.
+    - We should clip [panel]{"entity":"object", "group":"close"} to keep the backpack from opening.
+    - Shatter the [cell phone]{"entity":"object", "group":"break"}.
+    - I want to look at the [cabinet]{"entity":"object", "group":"search"}.
+    - Can I look around the [floorboard]{"entity":"object", "group":"search"}.
+    - Find the [codes]{"entity":"object", "group":"search"}.
+    - Can I find something on the [toolbox]{"entity":"object", "group":"search"}?
+    - Take the [shades]{"entity":"object", "group":"move"} off the [board]{"entity":"object", "group":"search"}!
+    - I open the [minute hand]{"entity":"object", "group":"open"}
+    - I look around the [frame]{"entity":"object", "group":"search"}
+    - I look at the [sofa]{"entity":"object", "group":"search"}
+    - I inspect the [portrait]{"entity":"object", "group":"search"}
+    - I search the [entryway doors]{"entity":"object", "group":"search"}
+    - search the [interior doors]{"entity":"object", "group":"search"}
+    - look at [area rugs]{"entity":"object", "group":"search"}
+    - find [slat]{"entity":"object", "group":"search"}
+    - open [tray]{"entity":"object", "group":"open"}
+    - close [literature]{"entity":"object", "group":"close"}
+    - rotate [literatures]{"entity":"object", "group":"rotate"}
+    - move [passwords]{"entity":"object", "group":"move"}
+    - break [sofas]{"entity":"object", "group":"break"}
+    - use [reflective surface]{"entity":"object", "group":"use"}
+    - shake [poster frame]{"entity":"object", "group":"shake"}
+    - Can you lift the [wardrobes]{"entity":"object","group":"move"} to see if there's something underneath?
+    - I'm going to push the [surface]{"entity":"object","group":"use"} to see if it triggers anything.
+    - Let's rotate the [picture]{"entity":"object","group":"rotate"} to reveal a hidden passage.
+    - Can you insert the [wardrobes]{"entity":"object","group":"insert"} into the [umbrella]{"entity":"object","group":"open"} to unlock the door?
+    - I'm going to grab the [desk]{"entity":"object","group":"search"} to see if there's anything hidden inside.
+    - Let's shake the [floor lamp]{"entity":"object","group":"shake"} to see if we can hear anything rattling inside.
+    - Can we look behind the [mobile device]{"entity":"object","group":"search"} to see if there's a safe?
+    - Can you pull the [exit doors]{"entity":"object","group":"use"} to see what happens?
+    - Let's break open the [cell phone]{"entity":"object","group":"break"} to get the supplies inside.
+    - Can we close the [compartment]{"entity":"object","group":"close"} to see if it unlocks something?
+    - I'm going to explore the [surface]{"entity":"object","group":"search"} for any hidden clues.
+    - Can you interact with the [compartments]{"entity":"object","group":"use"} to access the hidden files?
+    - Let's lift the [secret code]{"entity":"object","group":"move"} to see what's inside the [windows]{"entity":"object","group":"open"}.
+    - Can we push the [button]{"entity":"object","group":"move"} to reveal a hidden room?
+    - Can you turn the [solid door]{"entity":"object","group":"rotate"} to see if it's unlocked?
+    - Let's nudge the [solid door]{"entity":"object","group":"move"} to see if there's anything underneath.
+    - Can you manipulate the [walls]{"entity":"object","group":"open"} to see if it can be picked?
+    - Let's prod the [desk]{"entity":"object","group":"move"} to see if it moves.
+    - Can you hoist the [lamps]{"entity":"object","group":"move"} to see what's behind it?
+    - Let's wiggle the [window curtains]{"entity":"object","group":"move"} to see if it comes off.
+    - Can you operate the [chair]{"entity":"object","group":"use"} to turn on the lights?
+    - Let's pull the [slipper]{"entity":"object","group":"move"} to see what it activates.
+    - Can you lift up the [picture]{"entity":"object","group":"move"} to see if there's a trapdoor?
+    - Let's fiddle with the [combinations]{"entity":"object","group":"rotate"} to see if it unlocks the safe.
+    - Can you pry the [portraits]{"entity":"object","group":"move"} to see what's behind it?
+    - Let's explore the [blinds]{"entity":"object","group":"search"} for any hidden compartments.
+    - Can you press the [novel]{"entity":"object","group":"use"} to see if it triggers something?
+    - Let's pull the [mobile device]{"entity":"object","group":"use"} to see what it activates.
+    - Can you examine the [surface]{"entity":"object","group":"search"} for any hidden messages?
+    - I examine the [compartments]{"entity":"object","group":"search"}
+    - Let's slide the [pins]{"entity":"object","group":"move"} to reveal a hidden room.
+    - Can you twist the [clock hand]{"entity":"object","group":"rotate"} in the [light]{"entity":"object","group":"open"} to see if it unlocks?
+    - Let's move the [panel doors]{"entity":"object","group":"move"} and [tray]{"entity":"object","group":"move"} to see if there's a trapdoor.
+    - Can you use the [keycards]{"entity":"object","group":"rotate"} to remove the [walls]{"entity":"object","group":"move"} and look inside?
+    - Let's pull the [wooden door]{"entity":"object","group":"move"} and [manuscripts]{"entity":"object","group":"use"} to reveal a hidden compartment.
+    - Can you shake the [desks]{"entity":"object","group":"shake"} to see if there's anything hidden inside?
+    - Let's push the [bookshelf]{"entity":"object","group":"move"} or move the [boot]{"entity":"object","group":"move"} to see if there's a secret door.
+    - Can you insert the [minute hand]{"entity":"object","group":"insert"} into the [shades]{"entity":"object","group":"use"} to unlock the door?
+    - Let's rotate the [boot]{"entity":"object","group":"rotate"} and [shoe]{"entity":"object","group":"rotate"} to see if it triggers anything.
+    - Can you break the [light]{"entity":"object","group":"break"} with the [portal doors]{"entity":"object","group":"use"} to reveal a hidden item?
+    - Let's lift the [sofa]{"entity":"object","group":"move"} and [solid doors]{"entity":"object","group":"move"} to see if there's a hidden switch.
+    - Can you use the [frame]{"entity":"object","group":"use"} to inspect the [photograph]{"entity":"object","group":"search"} in the [area rugs]{"entity":"object","group":"search"}?
+    - Let's pull the [portal doors]{"entity":"object","group":"move"} and [paintings]{"entity":"object","group":"move"} to see if there's a hidden trapdoor.
+    - Can you insert the [smartphone]{"entity":"object","group":"insert"} into the [portal door]{"entity":"object","group":"open"} to unlock the [solid door]{"entity":"object","group":"open"}?
+    - Let's push the [wall]{"entity":"object","group":"move"} and [plank]{"entity":"object","group":"move"} to see if there's a hidden compartment in the [blinds]{"entity":"object","group":"search"}.
+    - Can you use the [board]{"entity":"object","group":"use"} to examine the [light fixture]{"entity":"object","group":"search"} for any hidden clues?
+    - Let's rotate the [pin]{"entity":"object","group":"rotate"} and [manuscript]{"entity":"object","group":"rotate"} to see if it unlocks the [writing instrument]{"entity":"object","group":"open"}.
+    - Can you shake the [bookcases]{"entity":"object","group":"shake"} to see if it reveals a hidden [back doors]{"entity":"object","group":"search"}?
+    - Let's break the [passcode]{"entity":"object","group":"break"} with the [floor lamps]{"entity":"object","group":"use"} to see if there's a [desks]{"entity":"object","group":"search"} hidden inside.
+    - Can you lift the [portal door]{"entity":"object","group":"move"} and [panel doors]{"entity":"object","group":"move"} to see if there's a hidden [pins]{"entity":"object","group":"open"} underneath?
+    - Let's push the [marker]{"entity":"object","group":"move"} and [second hand]{"entity":"object","group":"move"} to see if there's a hidden [picture frames]{"entity":"object","group":"open"}.
+    - Can you use the [code]{"entity":"object","group":"use"} to retrieve the [panel]{"entity":"object","group":"search"} from the [floorboard]{"entity":"object","group":"search"}?
+    - We should explore the [lockbox]{"entity":"object","group":"search"} for clues.
+    - The only way to interact with the [writing instrument]{"entity":"object","group":"use"} is to push the [button]{"entity":"object","group":"use"} on the base.
+    - I'm going to shake the [exit door]{"entity":"object","group":"shake"} and see if there's anything inside.
+    - The [panel]{"entity":"object","group":"move"} on the wall seems to be hiding something, let's lift it up and take a look.
+    - We need to interact with the [sofas]{"entity":"object","group":"use"} by inserting the [portal door]{"entity":"object","group":"insert"} into the port.
+    - Can we pull the [secret code]{"entity":"object","group":"use"} to see what happens?
+    - I'm going to rotate the [books]{"entity":"object","group":"rotate"} and see if it triggers anything.
+    - Let's break the [front door]{"entity":"object","group":"break"} and see if there's anything hidden inside.
+    - We could try to insert the [bed]{"entity":"object","group":"insert"} into the [bookshelf]{"entity":"object","group":"use"} and see if anything happens.
+    - Can you grab the [pantries]{"entity":"object","group":"insert"} and unlock the [phone]{"entity":"object","group":"open"}?
+    - Let's push the [button]{"entity":"object","group":"move"} on the [surfaces]{"entity":"object","group":"search"} and see if anything happens.
+    - I'm going to pull the [secret code]{"entity":"object","group":"move"} to see what's behind it.
+    - We need to insert the [cubbyhole]{"entity":"object","group":"insert"} into the [light fixture]{"entity":"object","group":"use"} to make it work.
+    - The [exit door]{"entity":"object","group":"open"} won't budge, can you shake it a little to loosen it up?
+    - Let's rotate the [smartphone]{"entity":"object","group":"rotate"} and see if there's anything hidden inside.
+    - I'm going to lift the [surface]{"entity":"object","group":"move"} to see if there's a trapdoor underneath.
+    - Can we insert the [shoe]{"entity":"object","group":"insert"} into the [shoe]{"entity":"object","group":"use"} and see what happens?
+    - We should explore the [safe-deposit box]{"entity":"object","group":"search"} for any hidden compartments.
+    - Let's push the [button]{"entity":"object","group":"use"} on the [vault]{"entity":"object","group":"search"} and see if it does anything.
+    - I'm going to pull the [pictures]{"entity":"object","group":"move"} on the [looking glasses]{"entity":"object","group":"open"} and see if it's locked.
+    - Can we break the [pen]{"entity":"object","group":"break"} on the [keycards]{"entity":"object","group":"open"} and see what's inside?
+    - We need to insert the [book]{"entity":"object","group":"insert"} into the [bookcase]{"entity":"object","group":"open"} to open the [window drapes]{"entity":"object","group":"open"}.
+    - Can you shut [window blinds]{"entity":"object", "group":"close"} to keep the cold out?
+    - Pull [access code]{"entity":"object", "group":"close"} to block the light.
+    - I think we should seal [carpet]{"entity":"object", "group":"close"} before they come.
+    - Twist the [pencil]{"entity":"object", "group":"rotate"} to close [shades]{"entity":"object", "group":"close"} and secure the money.
+    - Can you snap [surfaces]{"entity":"object", "group":"close"} to prevent the box from opening?
+    - We need to bolt [artworks]{"entity":"object", "group":"close"} to prevent them from coming up.
+    - Let's slide [shelf]{"entity":"object", "group":"close"} to hide the documents.
+    - Can you cover [interior door]{"entity":"object", "group":"close"} with a [footwear]{"entity":"object", "group":"move"} to hide the sound?
+    - Push [shoe]{"entity":"object", "group":"close"} to keep the smell in.
+    - We should clip [wooden door]{"entity":"object", "group":"close"} to keep the backpack from opening.
+    - Shatter the [frame]{"entity":"object", "group":"break"}.
+    - I want to look at the [smartphone]{"entity":"object", "group":"search"}.
+    - Can I look around the [safe]{"entity":"object", "group":"search"}.
+    - Find the [tool case]{"entity":"object", "group":"search"}.
+    - Can I find something on the [pen]{"entity":"object", "group":"search"}?
+    - Take the [bookshelf]{"entity":"object", "group":"move"} off the [portraits]{"entity":"object", "group":"search"}!
+    - I open the [portrait]{"entity":"object", "group":"open"}
+    - I look around the [countertop]{"entity":"object", "group":"search"}
+    - I look at the [shoe]{"entity":"object", "group":"search"}
+    - I inspect the [front door]{"entity":"object", "group":"search"}
+    - I search the [loose boards]{"entity":"object", "group":"search"}
+    - search the [toolbox]{"entity":"object", "group":"search"}
+    - look at [workbenches]{"entity":"object", "group":"search"}
+    - find [solid door]{"entity":"object", "group":"search"}
+    - open [painting frame]{"entity":"object", "group":"open"}
+    - close [wooden doors]{"entity":"object", "group":"close"}
+    - rotate [pencil]{"entity":"object", "group":"rotate"}
+    - move [cabinet]{"entity":"object", "group":"move"}
+    - break [wooden door]{"entity":"object", "group":"break"}
+    - use [reflective surface]{"entity":"object", "group":"use"}
+    - shake [floor lamp]{"entity":"object", "group":"shake"}

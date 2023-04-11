@@ -1,0 +1,78 @@
+{
+  "cell": {
+    "look": {
+      "utter": "You are locked in a cell.",
+      "objects": {
+        "wall": {
+          "look": {
+            "utter": "The cell wall was quite sad. But at least some people seemed to have decorated it somehow.",
+            "objects": {
+              "poster": {
+                "look": {
+                  "utter": "The poster is very boring and plain. It's black and white and has a couple of pictures on it."
+                },
+                "move": {
+                  "utter": "You start tearing off one of the corners of the poster to loosen it from the wall. Good! There seems to be something behind the poster.",
+                  "objects": {
+                    "key": {
+                    }
+                  }
+                }
+              },
+              "picture": {
+                "look": {
+                  "utter": "There is a small picture of two men, laughing."
+                }
+              },
+              "drawing": {
+                "look": {
+                  "utter": "Someone has drawn a stick figurine on an empty spot on the wall. It is surrounded by random numbers.",
+                  "objects": {
+                    "code": {
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "bed": {
+          "look": {
+            "utter": "The bed is not soft."
+          },
+          "move": {
+            "utter": "It's quite heavy but you're able to move the bed. You reveal a hidden safe.",
+            "objects": {
+              "safe": {
+                "open": {
+                  "need": [
+                    "code"
+                  ],
+                  "utter": "The safe opens!",
+                  "objects": {
+                    "phone": {
+                      "use": {
+                        "utter": "You can see the chat history of the inmate before you with someone named T. The inmate says they hid the key to the cell door behind the poster on the wall."
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "door": {
+          "open": {
+            "utter": "You are free!",
+            "need": [
+              "key"
+            ]
+          },
+          "look": {
+            "utter": "The cell door is quite robust."
+          }
+        }
+      }
+    }
+  }
+}

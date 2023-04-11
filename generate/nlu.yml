@@ -1,0 +1,121 @@
+version: "3.1"
+
+nlu:
+- intent: start
+  examples: |
+    - Start
+    - begin
+    - explain the setting
+- intent: help
+  examples: |
+    - how does this work?
+    - help
+    - what should I type?
+
+- intent: interact
+  examples: |
+    - Can you lift the [<object>]{"entity":"object","group":"move"} to see if there's something underneath?
+    - I'm going to push the [<object>]{"entity":"object","group":"use"} to see if it triggers anything.
+    - Let's rotate the [<object>]{"entity":"object","group":"rotate"} to reveal a hidden passage.
+    - Can you insert the [<object>]{"entity":"object","group":"insert"} into the [<object>]{"entity":"object","group":"open"} to unlock the door?
+    - I'm going to grab the [<object>]{"entity":"object","group":"search"} to see if there's anything hidden inside.
+    - Let's shake the [<object>]{"entity":"object","group":"shake"} to see if we can hear anything rattling inside.
+    - Can we look behind the [<object>]{"entity":"object","group":"search"} to see if there's a safe?
+    - Can you pull the [<object>]{"entity":"object","group":"use"} to see what happens?
+    - Let's break open the [<object>]{"entity":"object","group":"break"} to get the supplies inside.
+    - Can we close the [<object>]{"entity":"object","group":"close"} to see if it unlocks something?
+    - I'm going to explore the [<object>]{"entity":"object","group":"search"} for any hidden clues.
+    - Can you interact with the [<object>]{"entity":"object","group":"use"} to access the hidden files?
+    - Let's lift the [<object>]{"entity":"object","group":"move"} to see what's inside the [<object>]{"entity":"object","group":"open"}.
+    - Can we push the [button]{"entity":"object","group":"move"} to reveal a hidden room?
+    - Can you turn the [<object>]{"entity":"object","group":"rotate"} to see if it's unlocked?
+    - Let's nudge the [<object>]{"entity":"object","group":"move"} to see if there's anything underneath.
+    - Can you manipulate the [<object>]{"entity":"object","group":"open"} to see if it can be picked?
+    - Let's prod the [<object>]{"entity":"object","group":"move"} to see if it moves.
+    - Can you hoist the [<object>]{"entity":"object","group":"move"} to see what's behind it?
+    - Let's wiggle the [<object>]{"entity":"object","group":"move"} to see if it comes off.
+    - Can you operate the [<object>]{"entity":"object","group":"use"} to turn on the lights?
+    - Let's pull the [<object>]{"entity":"object","group":"move"} to see what it activates.
+    - Can you lift up the [<object>]{"entity":"object","group":"move"} to see if there's a trapdoor?
+    - Let's fiddle with the [<object>]{"entity":"object","group":"rotate"} to see if it unlocks the safe.
+    - Can you pry the [<object>]{"entity":"object","group":"move"} to see what's behind it?
+    - Let's explore the [<object>]{"entity":"object","group":"search"} for any hidden compartments.
+    - Can you press the [<object>]{"entity":"object","group":"use"} to see if it triggers something?
+    - Let's pull the [<object>]{"entity":"object","group":"use"} to see what it activates.
+    - Can you examine the [<object>]{"entity":"object","group":"search"} for any hidden messages?
+    - I examine the [<object>]{"entity":"object","group":"search"}
+    - Let's slide the [<object>]{"entity":"object","group":"move"} to reveal a hidden room.
+    - Can you twist the [<object>]{"entity":"object","group":"rotate"} in the [<object>]{"entity":"object","group":"open"} to see if it unlocks?
+    - Let's move the [<object>]{"entity":"object","group":"move"} and [<object>]{"entity":"object","group":"move"} to see if there's a trapdoor.
+    - Can you use the [<object>]{"entity":"object","group":"rotate"} to remove the [<object>]{"entity":"object","group":"move"} and look inside?
+    - Let's pull the [<object>]{"entity":"object","group":"move"} and [<object>]{"entity":"object","group":"use"} to reveal a hidden compartment.
+    - Can you shake the [<object>]{"entity":"object","group":"shake"} to see if there's anything hidden inside?
+    - Let's push the [<object>]{"entity":"object","group":"move"} or move the [<object>]{"entity":"object","group":"move"} to see if there's a secret door.
+    - Can you insert the [<object>]{"entity":"object","group":"insert"} into the [<object>]{"entity":"object","group":"use"} to unlock the door?
+    - Let's rotate the [<object>]{"entity":"object","group":"rotate"} and [<object>]{"entity":"object","group":"rotate"} to see if it triggers anything.
+    - Can you break the [<object>]{"entity":"object","group":"break"} with the [<object>]{"entity":"object","group":"use"} to reveal a hidden item?
+    - Let's lift the [<object>]{"entity":"object","group":"move"} and [<object>]{"entity":"object","group":"move"} to see if there's a hidden switch.
+    - Can you use the [<object>]{"entity":"object","group":"use"} to inspect the [<object>]{"entity":"object","group":"search"} in the [<object>]{"entity":"object","group":"search"}?
+    - Let's pull the [<object>]{"entity":"object","group":"move"} and [<object>]{"entity":"object","group":"move"} to see if there's a hidden trapdoor.
+    - Can you insert the [<object>]{"entity":"object","group":"insert"} into the [<object>]{"entity":"object","group":"open"} to unlock the [<object>]{"entity":"object","group":"open"}?
+    - Let's push the [<object>]{"entity":"object","group":"move"} and [<object>]{"entity":"object","group":"move"} to see if there's a hidden compartment in the [<object>]{"entity":"object","group":"search"}.
+    - Can you use the [<object>]{"entity":"object","group":"use"} to examine the [<object>]{"entity":"object","group":"search"} for any hidden clues?
+    - Let's rotate the [<object>]{"entity":"object","group":"rotate"} and [<object>]{"entity":"object","group":"rotate"} to see if it unlocks the [<object>]{"entity":"object","group":"open"}.
+    - Can you shake the [<object>]{"entity":"object","group":"shake"} to see if it reveals a hidden [<object>]{"entity":"object","group":"search"}?
+    - Let's break the [<object>]{"entity":"object","group":"break"} with the [<object>]{"entity":"object","group":"use"} to see if there's a [<object>]{"entity":"object","group":"search"} hidden inside.
+    - Can you lift the [<object>]{"entity":"object","group":"move"} and [<object>]{"entity":"object","group":"move"} to see if there's a hidden [<object>]{"entity":"object","group":"open"} underneath?
+    - Let's push the [<object>]{"entity":"object","group":"move"} and [<object>]{"entity":"object","group":"move"} to see if there's a hidden [<object>]{"entity":"object","group":"open"}.
+    - Can you use the [<object>]{"entity":"object","group":"use"} to retrieve the [<object>]{"entity":"object","group":"search"} from the [<object>]{"entity":"object","group":"search"}?
+    - We should explore the [<object>]{"entity":"object","group":"search"} for clues.
+    - The only way to interact with the [<object>]{"entity":"object","group":"use"} is to push the [button]{"entity":"object","group":"use"} on the base.
+    - I'm going to shake the [<object>]{"entity":"object","group":"shake"} and see if there's anything inside.
+    - The [<object>]{"entity":"object","group":"move"} on the wall seems to be hiding something, let's lift it up and take a look.
+    - We need to interact with the [<object>]{"entity":"object","group":"use"} by inserting the [<object>]{"entity":"object","group":"insert"} into the port.
+    - Can we pull the [<object>]{"entity":"object","group":"use"} to see what happens?
+    - I'm going to rotate the [<object>]{"entity":"object","group":"rotate"} and see if it triggers anything.
+    - Let's break the [<object>]{"entity":"object","group":"break"} and see if there's anything hidden inside.
+    - We could try to insert the [<object>]{"entity":"object","group":"insert"} into the [<object>]{"entity":"object","group":"use"} and see if anything happens.
+    - Can you grab the [<object>]{"entity":"object","group":"insert"} and unlock the [<object>]{"entity":"object","group":"open"}?
+    - Let's push the [button]{"entity":"object","group":"move"} on the [<object>]{"entity":"object","group":"search"} and see if anything happens.
+    - I'm going to pull the [<object>]{"entity":"object","group":"move"} to see what's behind it.
+    - We need to insert the [<object>]{"entity":"object","group":"insert"} into the [<object>]{"entity":"object","group":"use"} to make it work.
+    - The [<object>]{"entity":"object","group":"open"} won't budge, can you shake it a little to loosen it up?
+    - Let's rotate the [<object>]{"entity":"object","group":"rotate"} and see if there's anything hidden inside.
+    - I'm going to lift the [<object>]{"entity":"object","group":"move"} to see if there's a trapdoor underneath.
+    - Can we insert the [<object>]{"entity":"object","group":"insert"} into the [<object>]{"entity":"object","group":"use"} and see what happens?
+    - We should explore the [<object>]{"entity":"object","group":"search"} for any hidden compartments.
+    - Let's push the [button]{"entity":"object","group":"use"} on the [<object>]{"entity":"object","group":"search"} and see if it does anything.
+    - I'm going to pull the [<object>]{"entity":"object","group":"move"} on the [<object>]{"entity":"object","group":"open"} and see if it's locked.
+    - Can we break the [<object>]{"entity":"object","group":"break"} on the [<object>]{"entity":"object","group":"open"} and see what's inside?
+    - We need to insert the [<object>]{"entity":"object","group":"insert"} into the [<object>]{"entity":"object","group":"open"} to open the [<object>]{"entity":"object","group":"open"}.
+    - Can you shut [<object>]{"entity":"object", "group":"close"} to keep the cold out?
+    - Pull [<object>]{"entity":"object", "group":"close"} to block the light.
+    - I think we should seal [<object>]{"entity":"object", "group":"close"} before they come.
+    - Twist the [<object>]{"entity":"object", "group":"rotate"} to close [<object>]{"entity":"object", "group":"close"} and secure the money.
+    - Can you snap [<object>]{"entity":"object", "group":"close"} to prevent the box from opening?
+    - We need to bolt [<object>]{"entity":"object", "group":"close"} to prevent them from coming up.
+    - Let's slide [<object>]{"entity":"object", "group":"close"} to hide the documents.
+    - Can you cover [<object>]{"entity":"object", "group":"close"} with a [<object>]{"entity":"object", "group":"move"} to hide the sound?
+    - Push [<object>]{"entity":"object", "group":"close"} to keep the smell in.
+    - We should clip [<object>]{"entity":"object", "group":"close"} to keep the backpack from opening.
+    - Shatter the [<object>]{"entity":"object", "group":"break"}.
+    - I want to look at the [<object>]{"entity":"object", "group":"search"}.
+    - Can I look around the [<object>]{"entity":"object", "group":"search"}.
+    - Find the [<object>]{"entity":"object", "group":"search"}.
+    - Can I find something on the [<object>]{"entity":"object", "group":"search"}?
+    - Take the [<object>]{"entity":"object", "group":"move"} off the [<object>]{"entity":"object", "group":"search"}!
+    - I open the [<object>]{"entity":"object", "group":"open"}
+    - I look around the [<object>]{"entity":"object", "group":"search"}
+    - I look at the [<object>]{"entity":"object", "group":"search"}
+    - I inspect the [<object>]{"entity":"object", "group":"search"}
+    - I search the [<object>]{"entity":"object", "group":"search"}
+    - search the [<object>]{"entity":"object", "group":"search"}
+    - look at [<object>]{"entity":"object", "group":"search"}
+    - find [<object>]{"entity":"object", "group":"search"}
+    - open [<object>]{"entity":"object", "group":"open"}
+    - close [<object>]{"entity":"object", "group":"close"}
+    - rotate [<object>]{"entity":"object", "group":"rotate"}
+    - move [<object>]{"entity":"object", "group":"move"}
+    - break [<object>]{"entity":"object", "group":"break"}
+    - use [<object>]{"entity":"object", "group":"use"}
+    - shake [<object>]{"entity":"object", "group":"shake"}

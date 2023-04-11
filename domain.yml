@@ -1,0 +1,24 @@
+version: "3.1"
+
+intents:
+  - help
+  - interact
+  - start
+
+responses:
+  utter_help:
+  - text: "You can search, move, use, break, shake and rotate objects. Write what you want to do."
+
+  utter_start:
+  - text: "You are locked in a cell! Find a way to escape!"
+
+entities:
+- object
+actions:
+- action_interact
+slots:
+  data:
+    type: rasa.shared.core.slots.AnySlot
+    initial_value: null
+    mappings:
+    - type: custom

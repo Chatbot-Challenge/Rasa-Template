@@ -1,0 +1,255 @@
+nlu:
+- synonym: bed
+  examples: |
+    - beds
+- synonym: board
+  examples: |
+    - loose board
+    - floorboard
+    - panel
+    - plank
+    - slat
+    - board
+    - loose boards
+- synonym: book
+  examples: |
+    - novel
+    - literature
+    - text
+    - manuscript
+    - books
+    - novels
+    - literatures
+    - texts
+    - manuscripts
+- synonym: bookshelf
+  examples: |
+    - bookcase
+    - shelf
+    - bookshelves
+    - bookcases
+    - shelves
+- synonym: cabinet
+  examples: |
+    - cupboard
+    - wardrobe
+    - locker
+    - pantry
+    - cabinets
+    - cupboards
+    - wardrobes
+    - lockers
+    - pantries
+- synonym: cell
+  examples: |
+    - cells
+    - prison
+- synonym: chair
+  examples: |
+    - seat
+    - stool
+    - bench
+    - sofa
+    - chairs
+    - seats
+    - stools
+    - benches
+    - sofas
+- synonym: clock hand
+  examples: |
+    - clock hands
+    - hands
+    - hour hand
+    - minute hand
+    - second hand
+- synonym: code
+  examples: |
+    - passcode
+    - code
+    - combination
+    - pin
+    - password
+    - access code
+    - secret code
+    - codes
+    - combinations
+    - pins
+    - passwords
+    - access codes
+    - secret codes
+- synonym: door
+  examples: |
+    - portal door
+    - entryway door
+    - exit door
+    - wooden door
+    - hinged door
+    - solid door
+    - panel door
+    - front door
+    - back door
+    - interior door
+    - doors
+    - portal doors
+    - entryway doors
+    - exit doors
+    - wooden doors
+    - hinged doors
+    - solid doors
+    - panel doors
+    - front doors
+    - back doors
+    - interior doors
+- synonym: drawer
+  examples: |
+    - compartment
+    - cubbyhole
+    - tray
+    - sleeve
+    - drawers
+    - compartments
+    - cubbyholes
+    - trays
+    - sleeves
+- synonym: drawing
+  examples: |
+    - drawings
+- synonym: frame
+  examples: |
+    - picture frame
+    - photo frame
+    - painting frame
+    - art frame
+    - poster frame
+    - frame
+    - picture frames
+- synonym: key
+  examples: |
+    - passkey
+    - skeleton key
+    - keycard
+    - keys
+    - passkeys
+    - skeleton keys
+    - keycards
+- synonym: lamp
+  examples: |
+    - light
+    - light fixture
+    - table lamp
+    - floor lamp
+    - lamps
+    - lights
+    - light fixtures
+    - table lamps
+    - floor lamps
+- synonym: mirror
+  examples: |
+    - looking glass
+    - reflective surface
+    - mirrors
+    - looking glasses
+    - reflective surfaces
+- synonym: pen
+  examples: |
+    - pen
+    - writing instrument
+    - marker
+    - pencil
+    - stylus
+- synonym: phone
+  examples: |
+    - phone
+    - telephone
+    - cell phone
+    - smartphone
+    - mobile device
+- synonym: picture
+  examples: |
+    - painting
+    - photograph
+    - artwork
+    - portrait
+    - pictures
+    - paintings
+    - photographs
+    - artworks
+    - portraits
+- synonym: poster
+  examples: |
+    - posters
+- synonym: rug
+  examples: |
+    - carpet
+    - mat
+    - floor covering
+    - area rug
+    - rugs
+    - carpets
+    - mats
+    - floor coverings
+    - area rugs
+- synonym: safe
+  examples: |
+    - safe
+    - strongbox
+    - vault
+    - lockbox
+    - safe-deposit box
+- synonym: shoe
+  examples: |
+    - shoe
+    - footwear
+    - boot
+    - sneaker
+    - slipper
+- synonym: table
+  examples: |
+    - desk
+    - workbench
+    - countertop
+    - surface
+    - tables
+    - desks
+    - workbenches
+    - countertops
+    - surfaces
+- synonym: toolbox
+  examples: |
+    - toolbox
+    - tool chest
+    - tool kit
+    - tool set
+    - tool case
+- synonym: umbrella
+  examples: |
+    - umbrella
+    - parasol
+    - rain gear
+    - sunshade
+- synonym: wall
+  examples: |
+    - walls
+- synonym: window
+  examples: |
+    - pane
+    - glass
+    - casement
+    - sash
+    - windows
+    - panes
+    - glasses
+    - casements
+    - sashes
+- synonym: window blinds
+  examples: |
+    - blinds
+    - shades
+    - curtains
+    - drapes
+    - window coverings
+    - window blinds
+    - window shades
+    - window curtains
+    - window drapes
+    - window coverings
