@@ -1,0 +1,14 @@
+{
+    "escape_room_name": "Under the sea",
+    "chatbot_name": "Neptun",
+    "user_name": "Erika Musterfrau",
+    "messagebox_caption": "Type here...",
+    "send_button_caption": "Swim",
+    "id": "under-the-sea",
+    "background-image": "under-the-sea-background-image.jpg",
+    "api_url": "http://localhost:5005",
+    "welcome-message": "You are under the sea.",
+    "chatbot-avatar": "jazz_club_avatar1.jpg",
+    "user-avatar": "jazz_club_avatar2.jpg"
+}
+
