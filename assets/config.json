@@ -1,7 +1,0 @@
-{
-    "escape_room_name": "Jazz Club",
-    "id": "jazz-club",
-    "api_url": "https://vm014.qu.tu-berlin.de/api5005",
-    "welcome-message": "You are in the Jazz Club escape room.",
-    "background-image": "jazz-club-background-image.png"
-}
